@@ -1,3 +1,7 @@
+html
+{
+  scroll-behavior: smooth;
+}
 :root
 {
   --dark_blue: #090821;
@@ -110,7 +114,10 @@ body
 }
 .gallery_category
 {
-  margin: 2em;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 0;
   display: inline-block;
 }
 .gallery_category img
@@ -123,26 +130,11 @@ body
   filter: brightness(0.8);
   cursor: pointer;
 }
-#vr_img
-{
-  background-image: url("resources/images/vr.jpg");
-}
-#mod_img
-{
-  background-image: url("resources/images/mod.jpg");
-}
-#photo_img
-{
-  background-image: url("resources/images/photo.JPG");
-}
-#vect_img
-{
-  background-image: url("resources/images/vect.png");
-}
-#dig_img
-{
-  background-image: url("resources/images/dig.png");
-}
+#vr_img { background-image: url("resources/images/vr.jpg"); }
+#mod_img { background-image: url("resources/images/mod.jpg"); }
+#photo_img { background-image: url("resources/images/photo.JPG"); }
+#vect_img { background-image: url("resources/images/vect.png"); }
+#dig_img { background-image: url("resources/images/dig.png"); }
 .category_image
 {
   width: 30vw;
@@ -153,6 +145,7 @@ body
 .text
 {
   text-align: center;
+  font-size: 1.1em;
 }
 .back_to_top
 {
@@ -161,16 +154,19 @@ body
   padding-top: 2vh;
   padding-bottom: 2vh;
   margin-bottom: 8vh;
-  height: 5vh;
+  height: 7vh;
+}
+.back_to_top button
+{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  background-color: inherit;
   color: var(--white);
   font-family: 'Montserrat';
   font-size: 1.2em;
   text-align: center;
-}
-back_to_top p
-{
-  padding-bottom: 2vh;
-  margin-bottom: 8vh;
 }
 .back_to_top_inner
 {
