@@ -87,3 +87,35 @@ body{ margin: 0; }
   height: 1.5em;
   width: auto;
 }
+.icons:hover{
+  fill: var(--hover);
+  cursor: pointer;
+}
+.icons_div
+{
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+#gallery{
+  width: 70vw;
+  position: absolute;
+  top: 0;
+  left: 20vw;
+  border: 1px solid #F00;
+}
+
+.gallery_category{
+  width: 40%;
+  height: 200px;
+  margin: 1em;
+  display: inline-block;
+  background-image: url("resources/images/us.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery_category:hover{
+  filter: hue-rotate(180deg) brightness(0.7);
+  cursor: pointer;
+}
