@@ -20,16 +20,15 @@
   font-weight: normal;
   font-style: normal;
 }
-body{ margin: 0; }
-#background_color
+body
 {
-  width: 100vw;
-  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
   background-color: var(--dark_blue);
 }
 #sidebar
 {
-  position: absolute;
+  position: fixed;
   top: 5vh;
   left: 5vw;
   width: 20vw;
@@ -87,7 +86,8 @@ body{ margin: 0; }
   height: 1.5em;
   width: auto;
 }
-.icons:hover{
+.icons:hover
+{
   fill: var(--hover);
   cursor: pointer;
 }
@@ -96,26 +96,93 @@ body{ margin: 0; }
   margin-top: 6vh;
   margin-bottom: 6vh;
 }
-
-#gallery{
+#gallery
+{
   width: 70vw;
   position: absolute;
-  top: 0;
-  left: 20vw;
-  border: 1px solid #F00;
+  top: 5vh;
+  right: 7vw;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 200;
+  font-size: 0.8em;
+  color: var(--white);
 }
-
-.gallery_category{
-  width: 40%;
-  height: 200px;
-  margin: 1em;
+.gallery_category
+{
+  margin: 2em;
   display: inline-block;
-  background-image: url("resources/images/us.png");
+}
+.gallery_category img
+{
+  width: 30vw;
+  height: 55vh;
+}
+.gallery_category:hover
+{
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+#vr_img
+{
+  background-image: url("resources/images/vr.jpg");
+}
+#mod_img
+{
+  background-image: url("resources/images/mod.jpg");
+}
+#photo_img
+{
+  background-image: url("resources/images/photo.JPG");
+}
+#vect_img
+{
+  background-image: url("resources/images/vect.png");
+}
+#dig_img
+{
+  background-image: url("resources/images/dig.png");
+}
+.category_image
+{
+  width: 30vw;
+  height: 50vh;
   background-size: cover;
   background-position: center;
 }
-
-.gallery_category:hover{
-  filter: hue-rotate(180deg) brightness(0.7);
+.text
+{
+  text-align: center;
+}
+.back_to_top
+{
+  position:relative;
+  margin-top: 4vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-bottom: 8vh;
+  height: 5vh;
+  color: var(--white);
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+  text-align: center;
+}
+back_to_top p
+{
+  padding-bottom: 2vh;
+  margin-bottom: 8vh;
+}
+.back_to_top_inner
+{
+  display: inline-block;
+}
+.back_to_top_inner p
+{
+  margin: 0;
+  font-size: 2em;
+}
+.back_to_top_inner:hover
+{
+  color: var(--blue);
   cursor: pointer;
 }
