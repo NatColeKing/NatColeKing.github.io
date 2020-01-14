@@ -10,6 +10,7 @@ html
   --white: #F5F0F6;
   --hover: #ffffff;
 }
+
 @font-face
 {
   font-family: 'Montserrat';
@@ -17,6 +18,7 @@ html
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face
 {
   font-family: 'Montserrat_Bold';
@@ -24,12 +26,16 @@ html
   font-weight: normal;
   font-style: normal;
 }
+
+/* setting up the background and its size */
 body
 {
   margin: 0;
   overflow-x: hidden;
   background-color: var(--dark_blue);
 }
+
+/* setting up the outer params of the sidebar */
 #sidebar
 {
   position: fixed;
@@ -39,9 +45,9 @@ body
   height: 80vh;
   color: var(--white);
   font-family: 'Montserrat';
-  /* border: 2px solid rgba(255, 0, 0, 0.5); /* to see where it is */
-  /* border-radius: 100px; */
 }
+
+/* "Natalie Van Maerssen" in sidebar */
 #sidebar h1
 {
   color: var(--blue);
@@ -49,6 +55,8 @@ body
   font-size: 1.8em;
   margin-bottom: 8vh;
 }
+
+/* "Work" and "Personal info" tabs in sidebar */
 .second_header
 {
   color: var(--blue);
@@ -58,15 +66,21 @@ body
   margin-top: 5vh;
   margin-bottom: 3vh;
 }
+
+/* so that you hover over the word, not the whole line */
 .second_header_inner
 {
   display: inline-block;
 }
+
+/* changing the color and cursor when you hover */
 .second_header_inner:hover
 {
   color: var(--hover);
   cursor: pointer;
 }
+
+/* the sub-categories of "work" and "personal info" tabs in sidebar */
 .third_header
 {
   color: var(--grey);
@@ -75,33 +89,46 @@ body
   margin-top: 0vh;
   margin-bottom: 2vh;
 }
+
+/* so that you hover over the word, not the whole line */
 .third_header_inner
 {
   display: inline-block;
 }
+
+/* changing the color and cursor when you hover */
 .third_header_inner:hover
 {
   color: var(--hover);
   cursor: pointer;
 }
+
+/* changing what the icons in the sidebar look like (e.g. linkedin) */
 .icons
 {
   fill: var(--grey);
   height: 1.5em;
   width: auto;
 }
+
+/* changing the color of the icons when you hover over them */
 .icons:hover
 {
   fill: var(--hover);
   cursor: pointer;
 }
+
+/* adding margins around the group of icons */
 .icons_div
 {
   margin-top: 6vh;
   margin-bottom: 6vh;
 }
 
-.main_view{
+/* class given to each viewable page */
+/* size of page (excluding fixed sidebar) determined here */
+.main_view
+{
   width: 70vw;
   position: absolute;
   top: 5vh;
@@ -111,11 +138,14 @@ body
   color: var(--white);
 }
 
+/* main page, accessible by clicking on "work" tab in sidebar */
 #gallery
 {
   font-weight: 200;
   font-size: 0.8em;
 }
+
+/* each individual subtab/picture of "work" (e.g. vr, vector art, etc) */
 .gallery_category
 {
   margin-top: 2em;
@@ -124,21 +154,29 @@ body
   margin-bottom: 0;
   display: inline-block;
 }
+
+/* the image seen in each of the gallery_category blocks */
 .gallery_category img
 {
   width: 30vw;
   height: 55vh;
 }
+
+/* to make each block a little darker when you hover over it */
 .gallery_category:hover
 {
   filter: brightness(0.8);
   cursor: pointer;
 }
+
+/* set the images of each block */
 #vr_img { background-image: url("resources/images/gallery/vr.jpg"); }
 #mod_img { background-image: url("resources/images/gallery/mod.jpg"); }
 #photo_img { background-image: url("resources/images/gallery/photo.JPG"); }
 #vect_img { background-image: url("resources/images/gallery/vect.png"); }
 #dig_img { background-image: url("resources/images/gallery/dig.png"); }
+
+/* prevent stretching when the window size changes */
 .category_image
 {
   width: 30vw;
@@ -146,11 +184,15 @@ body
   background-size: cover;
   background-position: center;
 }
+
+/* center the text under each block's category (e.g. vr, vector art, etc) */
 .text
 {
   text-align: center;
   font-size: 1.1em;
 }
+
+/* specify what back to top button should look like and give it margins */
 .back_to_top
 {
   position:relative;
@@ -160,6 +202,8 @@ body
   margin-bottom: 8vh;
   height: 7vh;
 }
+
+/* give the actual button style */
 .back_to_top button
 {
   border: 0;
@@ -172,24 +216,40 @@ body
   font-size: 1.2em;
   text-align: center;
 }
+
+/* so that you hover over the button, not the whole width of the div */
 .back_to_top_inner
 {
   display: inline-block;
 }
+
+/* format the arrow up */
 .back_to_top_inner p
 {
   margin: 0;
   font-size: 2em;
 }
+
+/* change the color when you hover over the button */
 .back_to_top_inner:hover
 {
   color: var(--blue);
   cursor: pointer;
 }
+
 #vr_portfolio
 {
-  background-color: #F00;
-  height: 200px;
+  /* background-color: inherit;
+  height: 200px; */
+}
+
+.vr_project
+{
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 0;
+  display: inline-block;
 }
 
 #mod_portfolio
@@ -216,6 +276,7 @@ body
   height: 200px;
 }
 
-.hide{
+.hide
+{
   display: none;
 }
