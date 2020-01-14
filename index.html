@@ -11,15 +11,15 @@
   crossorigin="anonymous"></script>
     <div id="sidebar">
       <h1>Natalie Van Maerssen</h1>
-      <div class="second_header"><div class="second_header_inner">WORK</div></div>
-      <div class="third_header"><div class="third_header_inner">Virtual Reality</div></div>
-      <div class="third_header"><div class="third_header_inner">3D Modeling</div></div>
-      <div class="third_header"><div class="third_header_inner">Photography</div></div>
-      <div class="third_header"><div class="third_header_inner">Vector Art</div></div>
-      <div class="third_header"><div class="third_header_inner">Digital Paintings and Collages</div></div>
-      <div class="second_header"><div class="second_header_inner">PERSONAL INFO</div></div>
-      <div class="third_header"><div class="third_header_inner">Contact</div></div>
-      <div class="third_header"><div class="third_header_inner">CV</div></div>
+      <div class="second_header"><div class="second_header_inner" id="work_cat_name">WORK</div></div>
+      <div class="third_header"><div class="third_header_inner" id="vr_cat_name">Virtual Reality</div></div>
+      <div class="third_header"><div class="third_header_inner" id="mod_cat_name">3D Modeling</div></div>
+      <div class="third_header"><div class="third_header_inner" id="photo_cat_name">Photography</div></div>
+      <div class="third_header"><div class="third_header_inner" id="vect_cat_name">Vector Art</div></div>
+      <div class="third_header"><div class="third_header_inner" id="dig_cat_name">Digital Paintings and Collages</div></div>
+      <div class="second_header"><div class="second_header_inner" id="personal_cat_name">PERSONAL INFO</div></div>
+      <div class="third_header"><div class="third_header_inner" id="contact_cat_name">Contact</div></div>
+      <div class="third_header"><div class="third_header_inner" id="cv_cat_name">CV</div></div>
       <div class="icons_div">
         <svg class="icons" id="linkedin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
           <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
@@ -80,7 +80,7 @@
         </svg>
       </div>
     </div>
-    <div id="gallery">
+    <div id="gallery" class="main_view">
       <div class="gallery_category">
         <div id="vr"><div id="vr_img" class="category_image"></div>
           <div class="text"><p>Virtual Reality</p></div>
@@ -113,12 +113,30 @@
         </button>
       </div>
     </div>
+    <div id="vr_portfolio" class="main_view hide">vr
 
-        <!-- <img src="resources/images/vr.jpg"><p>Virtual Reality</p></div>
-      <div class="gallery_category"><img src="resources/images/mod.jpg"><p>3D Modeling</p></div>
-      <div class="gallery_category"><img src="resources/images/photo.JPG"><p>Photography</p></div>
-      <div class="gallery_category"><img src="resources/images/vect.png"><p>Vector Art</p></div>
-      <div class="gallery_category"><img src="resources/images/dig.png"><p>Digital Paintings and Collages</p></div> -->
+    </div>
+    <div id="mod_portfolio" class="main_view hide">mod
+
+    </div>
+    <div id="photo_portfolio" class="main_view hide">photo
+
+    </div>
+    <div id="vect_portfolio" class="main_view hide">vect
+
+    </div>
+    <div id="dig_portfolio" class="main_view hide">dig
+
+    </div>
+    <div id="personal_info" class="main_view hide">bruv
+
+    </div>
+    <div id="contact" class="main_view hide">contact
+
+    </div>
+    <div id="cv" class="main_view hide">cv
+
+    </div>
     <script src="index.js" charset="utf-8"></script>
     <link rel="stylesheet" href="index.css">
   </body>

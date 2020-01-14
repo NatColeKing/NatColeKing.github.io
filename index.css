@@ -100,17 +100,21 @@ body
   margin-top: 6vh;
   margin-bottom: 6vh;
 }
-#gallery
-{
+
+.main_view{
   width: 70vw;
   position: absolute;
   top: 5vh;
   right: 7vw;
   text-align: center;
   font-family: 'Montserrat';
+  color: var(--white);
+}
+
+#gallery
+{
   font-weight: 200;
   font-size: 0.8em;
-  color: var(--white);
 }
 .gallery_category
 {
@@ -130,11 +134,11 @@ body
   filter: brightness(0.8);
   cursor: pointer;
 }
-#vr_img { background-image: url("resources/images/vr.jpg"); }
-#mod_img { background-image: url("resources/images/mod.jpg"); }
-#photo_img { background-image: url("resources/images/photo.JPG"); }
-#vect_img { background-image: url("resources/images/vect.png"); }
-#dig_img { background-image: url("resources/images/dig.png"); }
+#vr_img { background-image: url("resources/images/gallery/vr.jpg"); }
+#mod_img { background-image: url("resources/images/gallery/mod.jpg"); }
+#photo_img { background-image: url("resources/images/gallery/photo.JPG"); }
+#vect_img { background-image: url("resources/images/gallery/vect.png"); }
+#dig_img { background-image: url("resources/images/gallery/dig.png"); }
 .category_image
 {
   width: 30vw;
@@ -181,4 +185,37 @@ body
 {
   color: var(--blue);
   cursor: pointer;
+}
+#vr_portfolio
+{
+  background-color: #F00;
+  height: 200px;
+}
+
+#mod_portfolio
+{
+  background-color: var(--white);
+  height: 200px;
+}
+
+#photo_portfolio
+{
+  background-color: #F00;
+  height: 200px;
+}
+
+#vect_portfolio
+{
+  background-color: #F00;
+  height: 200px;
+}
+
+#dig_portfolio
+{
+  background-color: #F00;
+  height: 200px;
+}
+
+.hide{
+  display: none;
 }
