@@ -243,13 +243,39 @@ body
   height: 200px; */
 }
 
-.vr_project
+.vr_project_outer
 {
   margin-top: 2em;
   margin-left: 2em;
   margin-right: 2em;
   margin-bottom: 0;
+  display: block;
+}
+
+.vr_project_inner
+{
+  display: block;
+}
+
+.iframes
+{
   display: inline-block;
+}
+
+.description
+{
+  display: inline-block;
+  text-align: left;
+  /* position: center; */
+  position: relative;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  margin-left: 2em;
+  margin-right: 2em;
+  /* width: 24vw;
+  height: 10vh;
+  max-width: 560px;
+  max-height: 315px; */
 }
 
 #mod_portfolio
