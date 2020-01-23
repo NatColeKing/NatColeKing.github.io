@@ -4,8 +4,9 @@ html
 }
 :root
 {
+  --sidebar_blue: #053A42;
+  --bright_blue: #63A4A8;
   --dark_blue: #090821;
-  --blue: #63A4A8;
   --grey: #A7A4A8;
   --white: #F5F0F6;
   --hover: #ffffff;
@@ -35,31 +36,44 @@ body
   background-color: var(--dark_blue);
 }
 
+.full_screen
+{
+  width: 100%;
+  height: 100vh;
+}
+
 /* setting up the outer params of the sidebar */
 #sidebar
 {
   position: fixed;
-  top: 5vh;
-  left: 5vw;
-  width: 20vw;
-  height: 80vh;
-  color: var(--white);
+  display: block;
+  width: 15vw;
+  margin-right: 5vw;
+  min-width: 200px;
+  height: 100vh;
+  background: var(--sidebar_blue);
   font-family: 'Montserrat';
+}
+
+#sidebar_inner
+{
+  margin-top: 7vh;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 /* "Natalie Van Maerssen" in sidebar */
 #sidebar h1
 {
-  color: var(--blue);
+  color: var(--bright_blue);
   font-weight: 400;
   font-size: 1.8em;
-  margin-bottom: 8vh;
 }
 
 /* "Work" and "Personal info" tabs in sidebar */
 .second_header
 {
-  color: var(--blue);
+  color: var(--bright_blue);
   font-family: 'Montserrat_Bold';
   font-weight: 300;
   font-size: 0.8em;
@@ -86,6 +100,7 @@ body
   color: var(--grey);
   font-weight: 200;
   font-size: 0.8em;
+  margin-left: 1em;
   margin-top: 0vh;
   margin-bottom: 2vh;
 }
@@ -125,21 +140,39 @@ body
   margin-bottom: 6vh;
 }
 
+.main
+{
+  position: absolute;
+  left: 20vw;
+  display: block;
+  width: 80vw;
+  height: 100vh;
+  align-self: right;
+}
+
 /* class given to each viewable page */
 /* size of page (excluding fixed sidebar) determined here */
 .main_view
 {
   width: 70vw;
   position: absolute;
-  top: 5vh;
-  right: 7vw;
+  margin-top: 5vh;
+  margin-left: 2vw;
+  margin-right: 9vw;
   text-align: center;
   font-family: 'Montserrat';
   color: var(--white);
 }
 
+.gallery
+{
+  position: fixed;
+  width: 80vw;
+  height: 100vw;
+}
+
 /* main page, accessible by clicking on "work" tab in sidebar */
-#gallery
+#gallery_inner
 {
   font-weight: 200;
   font-size: 0.8em;
@@ -155,12 +188,7 @@ body
   display: inline-block;
 }
 
-/* the image seen in each of the gallery_category blocks */
-.gallery_category img
-{
-  width: 30vw;
-  height: 55vh;
-}
+
 
 /* to make each block a little darker when you hover over it */
 .gallery_category:hover
@@ -170,22 +198,23 @@ body
 }
 
 /* set the images of each block */
-#vr_img { background-image: url("resources/images/gallery/vr.jpg"); }
-#mod_img { background-image: url("resources/images/gallery/mod.jpg"); }
-#photo_img { background-image: url("resources/images/gallery/photo.JPG"); }
-#vect_img { background-image: url("resources/images/gallery/vect.png"); }
+#vr_img { background-image: url("resources/images/gallery/vr.png"); }
+#photo_img { background-image: url("resources/images/gallery/photo.png"); }
+#cs_img { background-image: url("resources/images/gallery/cs.png"); }
 #dig_img { background-image: url("resources/images/gallery/dig.png"); }
 
 /* prevent stretching when the window size changes */
 .category_image
 {
   width: 30vw;
+  min-width: 300px;
   height: 50vh;
+  min-height: 300px;
   background-size: cover;
   background-position: center;
 }
 
-/* center the text under each block's category (e.g. vr, vector art, etc) */
+/* center the text under each block's category (e.g. vr, csor art, etc) */
 .text
 {
   text-align: center;
@@ -233,7 +262,7 @@ body
 /* change the color when you hover over the button */
 .back_to_top_inner:hover
 {
-  color: var(--blue);
+  color: var(--bright_blue);
   cursor: pointer;
 }
 
@@ -260,17 +289,22 @@ body
 .iframes
 {
   display: inline-block;
+  border: none;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  width: 560px;
+  height: 315px;
 }
 
 .description
 {
-  display: inline-block;
+  /* display: inline-block; */
   text-align: left;
   /* position: center; */
   position: relative;
   /* top: 50%;
   transform: translateY(-50%); */
-  margin-left: 2em;
+  /* margin-left: 2em; */
   margin-right: 2em;
   /* width: 24vw;
   height: 10vh;
@@ -290,7 +324,7 @@ body
   height: 200px;
 }
 
-#vect_portfolio
+#cs_portfolio
 {
   background-color: #F00;
   height: 200px;
@@ -305,4 +339,45 @@ body
 .hide
 {
   display: none;
+}
+
+@media screen and (max-width: 992px)
+{
+  .headers
+  {
+    display: none;
+  }
+  #sidebar
+  {
+    position: relative;
+    background: none;
+    height: auto;
+    width: 100%;
+  }
+  #sidebar_inner
+  {
+    margin-top: 5vh;
+    margin-left: 3vw;
+  }
+  .main
+  {
+    left: 0vw;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  .main_view
+  {
+    width: 94vw;
+    margin-top: 1vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .category_image
+  {
+    width: 50vw;
+    min-width: 150px;
+    height: 30vh;
+    min-height: 150px;
+  }
 }

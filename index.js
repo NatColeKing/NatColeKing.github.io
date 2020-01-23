@@ -17,7 +17,7 @@ $('#github').on('click', ()=>{
 });
 
 $('#work_cat_name').on('click', ()=>{
-  hideAllMainViewBut('gallery');
+  hideAllMainViewBut('gallery_inner');
 });
 
 $('#vr_cat_name').on('click', ()=>{
@@ -32,8 +32,8 @@ $('#photo_cat_name').on('click', ()=>{
   hideAllMainViewBut('photo_portfolio');
 });
 
-$('#vect_cat_name').on('click', ()=>{
-  hideAllMainViewBut('vect_portfolio');
+$('#cs_cat_name').on('click', ()=>{
+  hideAllMainViewBut('cs_portfolio');
 });
 
 $('#dig_cat_name').on('click', ()=>{
