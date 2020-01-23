@@ -17,42 +17,38 @@ $('#github').on('click', ()=>{
 });
 
 $('#work_cat_name').on('click', ()=>{
-  hideAllMainViewBut('gallery_inner');
+  hideAllMainViewBut('#gallery_inner');
 });
 
-$('#vr_cat_name').on('click', ()=>{
-  hideAllMainViewBut('vr_portfolio');
+$('.vr_cat_name').on('click', ()=>{
+  hideAllMainViewBut('#vr_portfolio');
 });
 
-$('#mod_cat_name').on('click', ()=>{
-  hideAllMainViewBut('mod_portfolio');
+$('.photo_cat_name').on('click', ()=>{
+  hideAllMainViewBut('#photo_portfolio');
 });
 
-$('#photo_cat_name').on('click', ()=>{
-  hideAllMainViewBut('photo_portfolio');
+$('.cs_cat_name').on('click', ()=>{
+  hideAllMainViewBut('#cs_portfolio');
 });
 
-$('#cs_cat_name').on('click', ()=>{
-  hideAllMainViewBut('cs_portfolio');
+$('.dig_cat_name').on('click', ()=>{
+  hideAllMainViewBut('#dig_portfolio');
 });
 
-$('#dig_cat_name').on('click', ()=>{
-  hideAllMainViewBut('dig_portfolio');
-});
-
-$('#personal_cat_name').on('click', ()=>{
-  hideAllMainViewBut('personal_info');
+$('#about_cat_name').on('click', ()=>{
+  hideAllMainViewBut('#about');
 });
 
 $('#contact_cat_name').on('click', ()=>{
-  hideAllMainViewBut('contact');
+  hideAllMainViewBut('#contact');
 });
 
 $('#cv_cat_name').on('click', ()=>{
-  hideAllMainViewBut('cv');
+  hideAllMainViewBut('#cv');
 });
 
-function hideAllMainViewBut(idName){
+function hideAllMainViewBut(query){
   $('.main_view').addClass('hide');
-  $('#'+idName).removeClass('hide');
+  $(query).removeClass('hide');
 }
