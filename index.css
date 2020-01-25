@@ -289,14 +289,14 @@ body
   border: none;
   margin-right: 2em;
   margin-bottom: 1em;
-  width: 560px;
+  width: 40vw;
   height: 315px;
 }
 
 .description
 {
   display: table-cell;
-  width: 10vw;
+  width: 25vw;
   height: 315px;
   position: relative;
   vertical-align: middle;
