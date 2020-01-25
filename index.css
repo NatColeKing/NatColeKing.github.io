@@ -275,8 +275,7 @@ body
 .vr_project_outer
 {
   margin: 2em;
-  margin-bottom: 4em;
-  display: block;
+  display: inline-block;
 }
 
 .vr_project_inner
@@ -297,7 +296,7 @@ body
 .description
 {
   display: table-cell;
-  width: 250px;
+  width: 10vw;
   height: 315px;
   position: relative;
   vertical-align: middle;
