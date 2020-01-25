@@ -352,6 +352,10 @@ body
     margin-top: 5vh;
     margin-left: 3vw;
   }
+  #sidebar_inner h1
+  {
+    font-size: 3.5em;
+  }
   .main
   {
     left: 0vw;
@@ -368,7 +372,7 @@ body
   }
   .category_image
   {
-    width: 50vw;
+    width: 65vw;
     min-width: 150px;
     height: 30vh;
     min-height: 150px;
@@ -378,6 +382,10 @@ body
     width: 560px;
     height: 315px;
   }
+  .text
+  {
+    font-size: 3em;
+  }
   .iframes
   {
     display: inline-block;
@@ -386,7 +394,6 @@ body
     width: 560px;
     height: 315px;
   }
-
   .description
   {
     display: block;
