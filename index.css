@@ -373,4 +373,24 @@ body
     height: 30vh;
     min-height: 150px;
   }
+  .vr_project_outer
+  {
+    width: 560px;
+    height: 315px;
+  }
+  .iframes
+  {
+    display: inline-block;
+    margin-right: none;
+    margin-bottom: 1em;
+    width: 560px;
+    height: 315px;
+  }
+
+  .description
+  {
+    display: block;
+    width: 560px;
+    position: relative;
+  }
 }
