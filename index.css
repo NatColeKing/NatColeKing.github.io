@@ -274,10 +274,8 @@ body
 
 .vr_project_outer
 {
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 0;
+  margin: 2em;
+  margin-bottom: 4em;
   display: block;
 }
 
@@ -298,18 +296,14 @@ body
 
 .description
 {
-  /* display: inline-block; */
-  text-align: left;
-  /* position: center; */
+  display: table-cell;
+  width: 250px;
+  height: 315px;
   position: relative;
-  /* top: 50%;
-  transform: translateY(-50%); */
-  /* margin-left: 2em; */
-  margin-right: 2em;
-  /* width: 24vw;
-  height: 10vh;
-  max-width: 560px;
-  max-height: 315px; */
+  vertical-align: middle;
+  text-align: left;
+  margin-right: 4em;
+  color: var(--grey);
 }
 
 #mod_portfolio
