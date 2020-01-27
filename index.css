@@ -400,4 +400,12 @@ body
     width: 560px;
     position: relative;
   }
+  .back_to_top
+  {
+    margin-bottom: 4vh;
+  }
+  .back_to_top button
+  {
+    font-size: 2em;
+  }
 }
