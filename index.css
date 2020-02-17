@@ -595,7 +595,33 @@ body
     display: block;
     width: 560px;
     position: relative;
+    font-size: 1.8em;
   }
+  #dig_img_09 { height: 35vh; }
+  #dig_img_08 { height: 60vh; }
+  #dig_img_07 { height: 25vh; }
+  #dig_img_06 { height: 60vh; }
+  #dig_img_05 { height: 60vh; }
+  #dig_img_04 { height: 35vh; }
+  #dig_img_03 { height: 60vh; }
+  #dig_img_02 { height: 40vh; }
+  #dig_img_01 { height: 25vh; }
+  .photo_title { font-size: 2.3em; }
+  .photo_description { font-size: 2em; }
+  #photo_img_14 { height: 35vh; }
+  #photo_img_13 { height: 35vh; }
+  #photo_img_12 { height: 35vh; }
+  #photo_img_11 { height: 35vh; }
+  #photo_img_10 { height: 35vh; }
+  #photo_img_09 { height: 65vh; }
+  #photo_img_08 { height: 35vh; }
+  #photo_img_07 { height: 35vh; }
+  #photo_img_06 { height: 35vh; }
+  #photo_img_05 { height: 35vh; }
+  #photo_img_04 { height: 35vh; }
+  #photo_img_03 { height: 35vh; }
+  #photo_img_02 { height: 35vh; }
+  #photo_img_01 { height: 35vh; }
   .back_to_top
   {
     margin-bottom: 4vh;
