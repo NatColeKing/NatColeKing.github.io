@@ -315,24 +315,6 @@ body
   color: var(--grey);
 }
 
-#mod_portfolio
-{
-  background-color: var(--white);
-  height: 200px;
-}
-
-#photo_portfolio
-{
-  background-color: #F00;
-  height: 200px;
-}
-
-#cs_portfolio
-{
-  background-color: #F00;
-  height: 200px;
-}
-
 #dig_portfolio { }
 
 .dig_project_outer
@@ -356,50 +338,50 @@ body
 #dig_img_09
 {
   height: 80vh;
-  min-width: 300px;
-  min-height: 154.25px;
+  min-width: 320px;
+  min-height: 247px;
   background-image: url("resources/images/digitalArt/nilaa.gif");
 }
 #dig_img_08
 {
   height: 90vh;
-  min-width: 300px;
-  min-height: 154.25px;
+  min-width: 240px;
+  min-height: 310.5px;
   background-image: url("resources/images/digitalArt/monet.png");
 }
 #dig_img_07
 {
   height: 60vh;
-  min-width: 300px;
-  min-height: 154.25px;
+  min-width: 320px;
+  min-height: 180px;
   background-image: url("resources/images/digitalArt/picnic.png");
 }
 #dig_img_06
 {
   height: 90vh;
-  min-width: 300px;
-  min-height: 154.25px;
+  min-width: 240px;
+  min-height: 309px;
   background-image: url("resources/images/digitalArt/tommy.png");
 }
 #dig_img_05
 {
   height: 90vh;
-  min-width: 300px;
-  min-height: 154.25px;
+  min-width: 288px;
+  min-height: 360px;
   background-image: url("resources/images/digitalArt/dani.png");
 }
 #dig_img_04
 {
   height: 80vh;
-  min-width: 300px;
-  min-height: 154.25px;
+  min-width: 320px;
+  min-height: 247px;
   background-image: url("resources/images/digitalArt/existentialCrisis.png");
 }
 #dig_img_03
 {
   height: 90vh;
-  min-width: 300px;
-  min-height: 154.25px;
+  min-width: 240px;
+  min-height: 310.5px;
   background-image: url("resources/images/digitalArt/hairyHoudini.png");
 }
 #dig_img_02
@@ -415,6 +397,40 @@ body
   min-width: 300px;
   min-height: 154.25px;
   background-image: url("resources/images/digitalArt/nobili.png");
+}
+
+#cs_portfolio
+{
+  background-color: #F00;
+  height: 200px;
+}
+
+#photo_portfolio { }
+
+.photo_project_outer
+{
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 0;
+  display: block;
+}
+
+.photo_project_inner
+{
+  width: 100%;
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#photo_img_01
+{
+  height: 60vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/photography/nobili.png");
 }
 
 .hide
