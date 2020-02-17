@@ -221,6 +221,19 @@ body
   font-size: 1.1em;
 }
 
+.photo_title
+{
+  font-size: 1.1em;
+  margin-top: 0.5em;
+}
+
+.photo_description
+{
+  font-size: 0.9em;
+  margin-top: 0.2em;
+  color: var(--grey)
+}
+
 /* specify what back to top button should look like and give it margins */
 .back_to_top
 {
@@ -266,11 +279,7 @@ body
   cursor: pointer;
 }
 
-#vr_portfolio
-{
-  /* background-color: inherit;
-  height: 200px; */
-}
+#vr_portfolio { }
 
 .vr_project_outer
 {
@@ -324,10 +333,88 @@ body
   height: 200px;
 }
 
-#dig_portfolio
+#dig_portfolio { }
+
+.dig_project_outer
 {
-  background-color: #F00;
-  height: 200px;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 0;
+  display: block;
+}
+
+.dig_project_inner
+{
+  width: 100%;
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#dig_img_09
+{
+  height: 80vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/nilaa.gif");
+}
+#dig_img_08
+{
+  height: 90vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/monet.png");
+}
+#dig_img_07
+{
+  height: 60vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/picnic.png");
+}
+#dig_img_06
+{
+  height: 90vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/tommy.png");
+}
+#dig_img_05
+{
+  height: 90vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/dani.png");
+}
+#dig_img_04
+{
+  height: 80vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/existentialCrisis.png");
+}
+#dig_img_03
+{
+  height: 90vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/hairyHoudini.png");
+}
+#dig_img_02
+{
+  height: 90vh;
+  min-width: 375px;
+  min-height: 319px;
+  background-image: url("resources/images/digitalArt/us.png");
+}
+#dig_img_01
+{
+  height: 60vh;
+  min-width: 300px;
+  min-height: 154.25px;
+  background-image: url("resources/images/digitalArt/nobili.png");
 }
 
 .hide
