@@ -231,6 +231,7 @@ body
 {
   font-size: 0.9em;
   margin-top: 0.2em;
+  margin-bottom: 3em;
   color: var(--grey)
 }
 
@@ -425,12 +426,103 @@ body
   background-position: center;
 }
 
+#photo_img_14
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/takingFlight.png");
+}
+#photo_img_13
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/amsterdamseGrachten.png");
+}
+#photo_img_12
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/parakeet.png");
+}
+#photo_img_11
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/rokin.png");
+}
+#photo_img_10
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/amsterdam.png");
+}
+#photo_img_09
+{
+  height: 80vh;
+  min-width: 240px;
+  min-height: 320px;
+  background-image: url("resources/images/photography/russianLock.png");
+}
+#photo_img_08
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/vielsalm.png");
+}
+#photo_img_07
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/fluffingUp.png");
+}
+#photo_img_06
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/aFloridaSunset.png");
+}
+#photo_img_05
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/marin.png");
+}
+#photo_img_04
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/sunflowers.png");
+}
+#photo_img_03
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/napTime.png");
+}
+#photo_img_02
+{
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/safariTree.png");
+}
 #photo_img_01
 {
-  height: 60vh;
-  min-width: 300px;
-  min-height: 154.25px;
-  background-image: url("resources/images/photography/nobili.png");
+  height: 80vh;
+  min-width: 320px;
+  min-height: 240px;
+  background-image: url("resources/images/photography/yosemite.png");
 }
 
 .hide
