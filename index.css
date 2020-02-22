@@ -140,6 +140,8 @@ body
   fill: var(--grey);
   height: 1.5em;
   width: auto;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 /* changing the color of the icons when you hover over them */
@@ -152,8 +154,9 @@ body
 /* adding margins around the group of icons */
 .icons_div
 {
-  margin-top: 6vh;
+  margin-top: 32vh;
   margin-bottom: 6vh;
+  text-align: center;
 }
 
 .main
