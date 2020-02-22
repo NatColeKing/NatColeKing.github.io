@@ -541,6 +541,13 @@ body
   background-image: url("resources/images/photography/yosemite.png");
 }
 
+.about_outer
+{
+  margin: 2em;
+  margin-bottom: 4em;
+  display: block;
+}
+
 #about_pic
 {
   display: table-cell;
@@ -562,9 +569,10 @@ body
   width: 25vw;
   height: 315px;
   position: relative;
+  vertical-align: middle;
   text-align: left;
   margin-left: 4em;
-  color: var(--grey);
+  color: var(--light_grey);
 }
 
 @media screen and (max-width: 992px)
@@ -664,11 +672,13 @@ body
     display: inline-block;
     margin: 3em;
     width: 70vw;
+    height: 40vh;
   }
   .about_description
   {
     display: inline-block;
     width: 60vw;
+    height: auto;
     font-size: 1.8em;
     margin: 0px;
   }
