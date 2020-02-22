@@ -8,8 +8,9 @@ html
   --bright_blue: #63A4A8;
   --dark_blue: #090821;
   --grey: #A7A4A8;
+  --light_grey: #C8C4CC;
   --white: #F5F0F6;
-  --hover: #ffffff;
+  --icons: #ffffff;
 }
 
 @font-face
@@ -33,7 +34,30 @@ body
 {
   margin: 0;
   overflow-x: hidden;
+  background: #EDEBED url(resources\imagesbackground_blue.jpg);
   background-color: var(--dark_blue);
+}
+
+#sidebar a
+{
+  text-decoration: none;
+  color: var(--grey);
+}
+
+#sidebar a:hover
+{
+  color: var(--white);
+}
+
+.gallery_category a
+{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.gallery_category a:hover
+{
+  color: var(--light_grey);
 }
 
 .full_screen
@@ -87,13 +111,6 @@ body
   display: inline-block;
 }
 
-/* changing the color and cursor when you hover */
-.second_header_inner:hover
-{
-  color: var(--hover);
-  cursor: pointer;
-}
-
 /* the sub-categories of "work" and "about" tabs in sidebar */
 .third_header
 {
@@ -111,13 +128,6 @@ body
   display: inline-block;
 }
 
-/* changing the color and cursor when you hover */
-.third_header_inner:hover
-{
-  color: var(--hover);
-  cursor: pointer;
-}
-
 /* changing what the icons in the sidebar look like (e.g. linkedin) */
 .icons
 {
@@ -129,7 +139,7 @@ body
 /* changing the color of the icons when you hover over them */
 .icons:hover
 {
-  fill: var(--hover);
+  fill: var(--icons);
   cursor: pointer;
 }
 
@@ -523,11 +533,6 @@ body
   min-width: 320px;
   min-height: 240px;
   background-image: url("resources/images/photography/yosemite.png");
-}
-
-.hide
-{
-  display: none;
 }
 
 @media screen and (max-width: 992px)
