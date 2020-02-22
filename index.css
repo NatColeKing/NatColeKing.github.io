@@ -60,6 +60,12 @@ body
   color: var(--light_grey);
 }
 
+.description a
+{
+  text-decoration: underline;
+  color: var(--grey);
+}
+
 .full_screen
 {
   width: 100%;
@@ -535,6 +541,32 @@ body
   background-image: url("resources/images/photography/yosemite.png");
 }
 
+#about_pic
+{
+  display: table-cell;
+  margin-right: 4em;
+  margin-bottom: 1em;
+  width: 50vw;
+  height: 75vh;
+  padding: none;
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("resources/images/about/me.png");
+}
+
+.about_description
+{
+  display: table-cell;
+  width: 25vw;
+  height: 315px;
+  position: relative;
+  text-align: left;
+  margin-left: 4em;
+  color: var(--grey);
+}
+
 @media screen and (max-width: 992px)
 {
   .headers
@@ -627,6 +659,19 @@ body
   #photo_img_03 { height: 35vh; }
   #photo_img_02 { height: 35vh; }
   #photo_img_01 { height: 35vh; }
+  #about_pic
+  {
+    display: inline-block;
+    margin: 3em;
+    width: 70vw;
+  }
+  .about_description
+  {
+    display: inline-block;
+    width: 60vw;
+    font-size: 1.8em;
+    margin: 0px;
+  }
   .back_to_top
   {
     margin-bottom: 4vh;
