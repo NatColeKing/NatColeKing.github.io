@@ -274,7 +274,6 @@ body
   background-color: inherit;
   color: var(--white);
   font-family: 'Montserrat';
-  font-size: 1.2em;
   text-align: center;
 }
 
@@ -282,13 +281,14 @@ body
 .back_to_top_inner
 {
   display: inline-block;
+  font-size: 1.2em;
 }
 
 /* format the arrow up */
 .back_to_top_inner p
 {
   margin: 0;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 /* change the color when you hover over the button */
@@ -418,10 +418,62 @@ body
   background-image: url("resources/images/digitalArt/nobili.png");
 }
 
-#cs_portfolio
+#cs_portfolio { }
+
+.description
 {
-  background-color: #F00;
-  height: 200px;
+  display: table-cell;
+  width: 25vw;
+  height: 315px;
+  position: relative;
+  vertical-align: middle;
+  text-align: left;
+  margin-right: 4em;
+  color: var(--grey);
+}
+
+.cs_outer
+{
+  width: 70vw;
+  margin: 2em;
+  display: inline-block;
+}
+
+.cs_inner
+{
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cs_description
+{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  text-align: left;
+  width: 40vw;
+  height: 50vh;
+  font-size: 0.9em;
+  padding-left: 2em;
+  color: var(--grey);
+}
+
+#cs_pic_02
+{
+  height: 50vh;
+  width: 45vw;
+  display: table-cell;
+  background-image: url("resources/images/digitalArt/tommy.png");
+}
+
+#cs_pic_01
+{
+  height: 50vh;
+  width: 45vw;
+  display: table-cell;
+  background-image: url("resources/images/digitalArt/us.png");
 }
 
 #photo_portfolio { }
@@ -684,12 +736,9 @@ body
     font-size: 1.8em;
     margin: 0px;
   }
-  .back_to_top
-  {
-    margin-bottom: 4vh;
-  }
-  .back_to_top button
+  .back_to_top_inner
   {
     font-size: 2em;
+    margin-bottom: 5vh;
   }
 }
