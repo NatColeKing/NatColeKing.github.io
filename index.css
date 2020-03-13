@@ -354,6 +354,20 @@ body
   background-position: center;
 }
 
+#dig_img_11
+{
+  height: 90vh;
+  min-width: 375px;
+  min-height: 319px;
+  background-image: url("resources/images/digitalArt/flag.gif");
+}
+#dig_img_10
+{
+  height: 90vh;
+  min-width: 375px;
+  min-height: 319px;
+  background-image: url("resources/images/digitalArt/name_fading.gif");
+}
 #dig_img_09
 {
   height: 80vh;
