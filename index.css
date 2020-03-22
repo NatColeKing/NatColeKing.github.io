@@ -463,31 +463,53 @@ body
 
 .cs_description
 {
-  display: table-cell;
+  display: inline-block;
   vertical-align: middle;
   position: relative;
   text-align: left;
-  width: 40vw;
-  height: 50vh;
-  font-size: 0.9em;
-  padding-left: 2em;
+  width: 50vw;
+  font-size: 1em;
+  margin-top: 1em;
   color: var(--grey);
+}
+
+#cs_pic_04
+{
+  width: 80vw;
+  display: table-cell;
+}
+
+#cs_pic_03
+{
+  height: 60vh;
+  width: 80vw;
+  display: table-cell;
+  background-image: url("resources/images/computerScience/movingVertices.gif");
 }
 
 #cs_pic_02
 {
-  height: 50vh;
-  width: 45vw;
+  height: 60vh;
+  width: 80vw;
   display: table-cell;
-  background-image: url("resources/images/digitalArt/tommy.png");
+  background-image: url("resources/images/computerScience/squares.gif");
 }
 
 #cs_pic_01
 {
-  height: 50vh;
-  width: 45vw;
+  height: 60vh;
+  width: 80vw;
   display: table-cell;
-  background-image: url("resources/images/digitalArt/us.png");
+  background-image: url("resources/images/computerScience/rayTrace.gif");
+}
+
+.cs_iframes
+{
+  display: inline-block;
+  border: none;
+  width: 80vw;
+  max-width: 800px;
+  height: 370px;
 }
 
 #photo_portfolio { }
