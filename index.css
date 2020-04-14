@@ -665,6 +665,42 @@ body
   color: var(--light_grey);
 }
 
+.cv_outer
+{
+  width: 70vw;
+  height: 100vh;
+}
+
+#cv_download
+{
+  margin: 2em;
+  margin-bottom: 4em;
+  text-align: left;
+}
+
+#cv_download a
+{
+  text-decoration: none;
+  color: var(--grey);
+}
+
+#cv_download a:hover
+{
+  color: var(--white);
+  cursor: pointer;
+}
+
+#cv_img
+{
+  width: 70vw;
+  height: 300vh;
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("resources/images/cv/cv.png");
+}
+
 @media screen and (max-width: 992px)
 {
   .headers
