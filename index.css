@@ -356,16 +356,16 @@ body
 
 #dig_img_11
 {
-  height: 90vh;
-  min-width: 375px;
-  min-height: 319px;
+  height: 60vh;
+  min-width: 320px;
+  min-height: 180px;
   background-image: url("resources/images/digitalArt/flag.gif");
 }
 #dig_img_10
 {
-  height: 90vh;
-  min-width: 375px;
-  min-height: 319px;
+  height: 60vh;
+  min-width: 320px;
+  min-height: 180px;
   background-image: url("resources/images/digitalArt/name_fading.gif");
 }
 #dig_img_09
@@ -475,6 +475,7 @@ body
 
 #cs_pic_04
 {
+  height: 60vh;
   width: 80vw;
   display: table-cell;
 }
@@ -507,7 +508,7 @@ body
 {
   display: inline-block;
   border: none;
-  width: 80vw;
+  width: 70vw;
   max-width: 800px;
   height: 370px;
 }
@@ -768,6 +769,8 @@ body
     position: relative;
     font-size: 1.8em;
   }
+  #dig_img_11 { height: 35vh; }
+  #dig_img_10 { height: 35vh; }
   #dig_img_09 { height: 35vh; }
   #dig_img_08 { height: 60vh; }
   #dig_img_07 { height: 25vh; }
