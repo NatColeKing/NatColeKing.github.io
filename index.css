@@ -6,6 +6,7 @@ html
 {
   --sidebar_blue: #053A42;
   --bright_blue: #63A4A8;
+  --burger: #8FEDF2;
   --dark_blue: #090821;
   --grey: #A7A4A8;
   --light_grey: #C8C4CC;
@@ -73,6 +74,10 @@ body
 }
 
 /* setting up the outer params of the sidebar */
+#burger
+{
+  display: none;
+}
 #sidebar
 {
   position: fixed;
@@ -708,6 +713,12 @@ body
   {
     display: none;
   }
+  #burger
+  {
+    display: block;
+    margin-left: 0.5em;
+    color: var(--burger);
+  }
   #sidebar
   {
     position: fixed;
@@ -724,11 +735,11 @@ body
   }
   #sidebar_inner h1
   {
-    margin: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     margin-left: 3vw;
     margin-right: 3vw;
-    font-size: 3.5em;
+    font-size: 3.8em;
     display: flex;
     justify-content: space-between;
   }
@@ -742,7 +753,7 @@ body
   .main_view
   {
     width: 94vw;
-    margin-top: 1vh;
+    margin-top: 12vh;
     margin-left: 2vw;
     margin-right: 2vw;
   }
