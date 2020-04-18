@@ -710,19 +710,27 @@ body
   }
   #sidebar
   {
-    position: relative;
-    background: none;
+    position: fixed;
+    display: block;
+    z-index: 1;
+    width: 100vw;
+    margin-right: 0px;
     height: auto;
-    width: 100%;
+    font-family: 'Montserrat';
   }
   #sidebar_inner
   {
-    margin-top: 5vh;
-    margin-left: 3vw;
+    margin: 0px;
   }
   #sidebar_inner h1
   {
+    margin: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
     font-size: 3.5em;
+    display: flex;
+    justify-content: space-between;
   }
   .main
   {
