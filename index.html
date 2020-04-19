@@ -20,18 +20,9 @@
     <script>
       window.onload = function sub_headers()
       {
-        console.log("Hi");
-        var x = document.getElementById("burger");
-        var y = document.getElementById("headers");
-        if (x.style.display === "block")
+        if (document.getElementById("burger").style.display === "block")
         {
-          console.log("phone");
-          y.style.display = "none";
-        }
-        else
-        {
-          console.log("web");
-          y.style.display = "block";
+          document.getElementById("headers").style.display = "none";
         }
       }
     </script>

@@ -18,6 +18,15 @@
       }
     </script>
     <script>
+      window.onload = function sub_headers()
+      {
+        if (document.getElementById("burger").style.display === "block")
+        {
+          document.getElementById("headers").style.display = "none";
+        }
+      }
+    </script>
+    <script>
       function hide_burger_menu() { document.getElementById("headers").style.display = "none"; }
     </script>
   <div class="full_screen">
@@ -29,7 +38,7 @@
           <div id="burger" align="right" onclick="burger_menu()">☰
           </div>
         </h1>
-        <div id="headers" style="display: none" onclick="hide_burger_menu()">
+        <div id="headers" onclick="hide_burger_menu()">
           <div class="second_header">
             <div class="second_header_inner" id="work_cat_name">
               <a href="index.html">WORK</a>
