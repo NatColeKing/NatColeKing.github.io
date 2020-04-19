@@ -7,6 +7,7 @@ html
   --sidebar_blue: #053A42;
   --bright_blue: #63A4A8;
   --burger: #8FEDF2;
+  --burger_menu: #3C7375;
   --dark_blue: #090821;
   --grey: #A7A4A8;
   --light_grey: #C8C4CC;
@@ -709,10 +710,6 @@ body
 
 @media screen and (max-width: 992px)
 {
-  .headers
-  {
-    display: none;
-  }
   #burger
   {
     display: block;
@@ -743,8 +740,54 @@ body
     display: flex;
     justify-content: space-between;
   }
+  #sidebar a
+  {
+    color: var(--sidebar_blue);
+  }
+  #sidebar a:hover
+  {
+    color: var(--sidebar_blue);
+  }
+  #headers
+  {
+    background-color: var(--burger_menu);
+    padding-top: 1em;
+    padding-bottom: 3em;
+  }
+  .second_header
+  {
+    font-size: 2.6em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  .third_header
+  {
+    font-size: 2.4em;
+    margin-left: 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  .icons
+  {
+    fill: var(--sidebar_blue);
+    height: 3.4em;
+  }
+  .icons:hover
+  {
+    fill: var(--sidebar_blue);
+  }
+  .icons_div
+  {
+    margin-bottom: 0em;
+    margin-top: 2em;
+    text-align: center;
+    position: relative;
+  }
   .main
   {
+    position: relative;
     left: 0vw;
     display: block;
     width: 100vw;
@@ -776,7 +819,7 @@ body
   .iframes
   {
     display: inline-block;
-    margin-right: none;
+    margin-right: 0em;
     margin-bottom: 1em;
     width: 560px;
     height: 315px;
@@ -837,5 +880,9 @@ body
   .back_to_top_inner
   {
     font-size: 2.6em;
+  }
+  .back_to_top_inner:hover
+  {
+    color: var(--white);
   }
 }

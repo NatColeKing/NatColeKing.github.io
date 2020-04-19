@@ -6,11 +6,30 @@
   </head>
   <body>
     <script src="resources/jquery.min.js" charset="utf-8"></script>
+    <script>
+      function burger_menu()
+      {
+        var x = document.getElementById("headers");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+    <script>
+      function hide_burger_menu() { document.getElementById("headers").style.display = "none"; }
+    </script>
   <div class="full_screen">
     <div id="sidebar">
       <div id="sidebar_inner">
-        <h1>Natalie Van Maerssen</h1>
-        <div class="headers">
+        <h1>
+          <div align="left">Natalie Van Maerssen
+          </div>
+          <div id="burger" align="right" onclick="burger_menu()">☰
+          </div>
+        </h1>
+        <div id="headers" style="display: none" onclick="hide_burger_menu()">
           <div class="second_header">
             <div class="second_header_inner" id="work_cat_name">
               <a href="index.html">WORK</a>
