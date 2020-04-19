@@ -750,6 +750,7 @@ body
   }
   #headers
   {
+    display: none;
     background-color: var(--burger_menu);
     padding-top: 1em;
     padding-bottom: 3em;
