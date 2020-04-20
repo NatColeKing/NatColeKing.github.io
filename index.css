@@ -796,14 +796,14 @@ body
   }
   .main_view
   {
-    width: 94vw;
+    width: 96vw;
     margin-top: 12vh;
     margin-left: 2vw;
     margin-right: 2vw;
   }
   .category_image
   {
-    width: 65vw;
+    width: 75vw;
     min-width: 150px;
     height: 30vh;
     min-height: 150px;
