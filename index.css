@@ -810,8 +810,12 @@ body
   }
   .vr_project_outer
   {
-    width: 560px;
-    height: 315px;
+    width: 80vw;
+    height: 420px;
+  }
+  .vr_project_inner
+  {
+    height: 420px;
   }
   .text
   {
@@ -822,14 +826,14 @@ body
     display: inline-block;
     margin-right: 0em;
     margin-bottom: 1em;
-    width: 560px;
-    height: 315px;
+    width: 80vw;
+    height: 420px;
+    max-width: 80vw;
   }
   .description
   {
     display: block;
-    width: 560px;
-    position: relative;
+    width: 80vw;
     font-size: 1.8em;
   }
   #dig_img_11 { height: 35vh; }
