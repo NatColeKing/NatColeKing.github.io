@@ -834,7 +834,7 @@ body
   {
     display: block;
     width: 80vw;
-    font-size: 1.8em;
+    font-size: 2em;
   }
   #dig_img_11 { height: 35vh; }
   #dig_img_10 { height: 35vh; }
@@ -848,7 +848,7 @@ body
   #dig_img_02 { height: 40vh; }
   #dig_img_01 { height: 25vh; }
   .photo_title { font-size: 2.3em; }
-  .photo_description { font-size: 1.8em; }
+  .photo_description { font-size: 2em; }
   #photo_img_14 { height: 35vh; }
   #photo_img_13 { height: 35vh; }
   #photo_img_12 { height: 35vh; }
@@ -871,7 +871,7 @@ body
   {
     vertical-align: top;
     width: 80vw;
-    font-size: 1.8em;
+    font-size: 2em;
     margin-top: 1em;
   }
   #cs_pic_04
@@ -910,7 +910,7 @@ body
     display: inline-block;
     width: 60vw;
     height: auto;
-    font-size: 1.8em;
+    font-size: 2em;
     margin: 0px;
   }
   .back_to_top
