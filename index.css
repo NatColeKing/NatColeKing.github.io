@@ -848,7 +848,7 @@ body
   #dig_img_02 { height: 40vh; }
   #dig_img_01 { height: 25vh; }
   .photo_title { font-size: 2.3em; }
-  .photo_description { font-size: 2em; }
+  .photo_description { font-size: 1.8em; }
   #photo_img_14 { height: 35vh; }
   #photo_img_13 { height: 35vh; }
   #photo_img_12 { height: 35vh; }
@@ -863,6 +863,41 @@ body
   #photo_img_03 { height: 35vh; }
   #photo_img_02 { height: 35vh; }
   #photo_img_01 { height: 35vh; }
+  .cs_outer
+  {
+    width: 80vw;
+  }
+  .cs_description
+  {
+    vertical-align: top;
+    width: 80vw;
+    font-size: 1.8em;
+    margin-top: 1em;
+  }
+  #cs_pic_04
+  {
+    height: auto;
+    width: 80vw;
+  }
+  #cs_pic_03
+  {
+    height: 25vh;
+    width: 80vw;
+  }
+  #cs_pic_02
+  {
+    height: 25vh;
+    width: 80vw;
+  }
+  #cs_pic_01
+  {
+    height: 25vh;
+    width: 80vw;
+  }
+  .cs_iframes
+  {
+    width: 80vw;
+  }
   #about_pic
   {
     display: inline-block;
