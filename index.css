@@ -652,7 +652,6 @@ body
   margin-bottom: 1em;
   width: 50vw;
   height: 75vh;
-  padding: none;
   object-fit: contain;
   background-size: contain;
   background-repeat: no-repeat;
@@ -912,6 +911,27 @@ body
     height: auto;
     font-size: 2em;
     margin: 0px;
+  }
+  .cv_outer
+  {
+    width: 90vw;
+    height: 100vh;
+    margin: 3vw;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  #cv_download
+  {
+    margin: 2em;
+    margin-left: 0em;
+    margin-bottom: 4em;
+    text-align: left;
+    font-size: 2em;
+  }
+  #cv_img
+  {
+    width: 90vw;
+    height: 140vh;
   }
   .back_to_top
   {
