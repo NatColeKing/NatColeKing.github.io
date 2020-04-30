@@ -922,11 +922,7 @@ body
   }
   #cv_download
   {
-    margin: 2em;
-    margin-left: 0em;
-    margin-bottom: 4em;
-    text-align: left;
-    font-size: 2em;
+    display: none;
   }
   #cv_img
   {
