@@ -491,7 +491,6 @@ body
 
 #cs_pic_04
 {
-  height: 60vh;
   width: 80vw;
   display: table-cell;
 }
@@ -937,10 +936,12 @@ body
     margin-top: 0em;
     margin-bottom: 0em;
   }
-  /* #cv_download
+  #cv_download
   {
-    display: none;
-  } */
+    font-size: 2.3em;
+    margin: 0em;
+    margin-top: 0.8em;
+  }
   #cv_img
   {
     width: 90vw;
