@@ -937,10 +937,10 @@ body
     margin-top: 0em;
     margin-bottom: 0em;
   }
-  #cv_download
+  /* #cv_download
   {
     display: none;
-  }
+  } */
   #cv_img
   {
     width: 90vw;
