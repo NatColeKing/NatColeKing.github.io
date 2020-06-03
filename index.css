@@ -304,6 +304,16 @@ body
   cursor: pointer;
 }
 
+.vr_phone
+{
+  display: none;
+}
+
+.vr_web
+{
+  display: block;
+}
+
 #vr_portfolio { }
 
 .vr_project_outer
@@ -806,6 +816,15 @@ body
     min-width: 150px;
     height: 30vh;
     min-height: 150px;
+  }
+  .vr_phone
+  {
+    display: block;
+  }
+
+  .vr_web
+  {
+    display: none;
   }
   .vr_project_outer
   {
