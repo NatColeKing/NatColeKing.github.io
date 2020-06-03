@@ -822,12 +822,10 @@ body
   }
   .iframes
   {
-    display: inline-block;
     margin-right: 0em;
-    margin-bottom: 1em;
     width: 80vw;
-    height: 420px;
     max-width: 80vw;
+    height: 420px;
   }
   .description
   {
