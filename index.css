@@ -497,6 +497,14 @@ body
   color: var(--grey);
 }
 
+#cs_pic_05
+{
+  height: 70vh;
+  width: 68vw;
+  display: table-cell;
+  background-image: url("resources/images/computerScience/website.png");
+}
+
 #cs_pic_04
 {
   width: 80vw;
