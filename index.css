@@ -917,6 +917,11 @@ body
     font-size: 2em;
     margin-top: 1em;
   }
+  #cs_pic_05
+  {
+    height: 30vh;
+    width: 80vw;
+  }
   #cs_pic_04
   {
     height: auto;
