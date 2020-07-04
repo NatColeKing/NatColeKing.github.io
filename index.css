@@ -6,6 +6,7 @@ html
 {
   --sidebar_blue: #053A42;
   --bright_blue: #63A4A8;
+  --brighter_blue: #7ECACE;
   --burger: #8FEDF2;
   --burger_menu: #3C7375;
   --dark_blue: #090821;
@@ -31,6 +32,14 @@ html
   font-style: normal;
 }
 
+@font-face
+{
+  font-family: 'Montserrat_Thin';
+  src: url('resources/fonts/montserrat/Montserrat-Thin.ttf') format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
 /* setting up the background and its size */
 body
 {
@@ -38,6 +47,19 @@ body
   overflow-x: hidden;
   background: #EDEBED url(resources\imagesbackground_blue.jpg);
   background-color: var(--dark_blue);
+}
+
+/* "Natalie Van Maerssen" in sidebar */
+#sidebar h1 a
+{
+  color: var(--bright_blue);
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+#sidebar h1 a:hover
+{
+  color: var(--brighter_blue);
 }
 
 #sidebar a
@@ -96,14 +118,6 @@ body
   margin-top: 7vh;
   margin-left: 1em;
   margin-right: 1em;
-}
-
-/* "Natalie Van Maerssen" in sidebar */
-#sidebar h1
-{
-  color: var(--bright_blue);
-  font-weight: 400;
-  font-size: 1.8em;
 }
 
 /* "Work" and "About" tabs in sidebar */
@@ -186,6 +200,122 @@ body
   text-align: center;
   font-family: 'Montserrat';
   color: var(--white);
+}
+
+#home_intro
+{
+  display: block;
+  height: auto;
+  width: 60vw;
+  margin: 4em;
+}
+
+#home_img
+{
+  display: table-cell;
+  padding-top: 1em;
+  vertical-align: top;
+}
+
+#home_gif
+{
+  display: list-item;
+  list-style-type: none;
+  height: 210px;
+  width: 210px;
+  background-image: url("resources/images/home/hello.gif");
+  border-radius: 50%;
+  background-size: 210px 280px;
+}
+
+#home_intro_text
+{
+  display: table-cell;
+  padding-left: 5em;
+  text-align: left;
+}
+
+#home_title
+{
+  font-size: 2.5em;
+  line-height: 1.7em;
+}
+
+#home_description
+{
+  font-size: 1em;
+  font-family: 'Montserrat_Thin';
+  line-height: 1.45em;
+}
+
+.home_link
+{
+  display: inline-block;
+  width: 110px;
+  height: 96px;
+  margin-left: 1em;
+  margin-right: 1em;
+  background-size: 120px 96px;
+}
+
+.home_link:hover
+{
+  width: 115px;
+  height: 96px;
+  background-size: 125px 100px;
+}
+
+#home_links
+{
+  height: auto;
+  width: 60vw;
+  padding: 4em;
+  padding-top: 1em;
+}
+
+#home_links a
+{
+  text-decoration: none; //to remove underline from pics
+}
+
+#home_vr
+{
+  background-image: url("resources/images/home/link_vr_off.png");
+}
+
+#home_dig
+{
+  background-image: url("resources/images/home/link_dig_off.png");
+}
+
+#home_cs
+{
+  background-image: url("resources/images/home/link_cs_off.png");
+}
+
+#home_photo
+{
+  background-image: url("resources/images/home/link_photo_off.png");
+}
+
+#home_vr:hover
+{
+  background-image: url("resources/images/home/link_vr_on.png");
+}
+
+#home_dig:hover
+{
+  background-image: url("resources/images/home/link_dig_on.png");
+}
+
+#home_cs:hover
+{
+  background-image: url("resources/images/home/link_cs_on.png");
+}
+
+#home_photo:hover
+{
+  background-image: url("resources/images/home/link_photo_on.png");
 }
 
 .gallery
@@ -838,6 +968,56 @@ body
     min-width: 150px;
     height: 30vh;
     min-height: 150px;
+  }
+  #home_intro
+  {
+    width: 80vw;
+    margin-top: 0em;
+  }
+  #home_img
+  {
+    display: table-cell;
+    padding-top: 0em;
+    -webkit-appearance: slider-horizontal;
+  }
+  #home_gif
+  {
+    height: 510px;
+    width: 510px;
+    background-size: 510px 680px;
+  }
+  #home_intro_text
+  {
+    display: block;
+    padding-left: 0em;
+  }
+  #home_title
+  {
+    font-size: 3.5em;
+    line-height: 1.3em;
+    margin-top: 1em;
+  }
+  #home_description
+  {
+    font-size: 2em;
+    line-height: 1.45em;
+  }
+  #home_links
+  {
+    width: 80vw;
+  }
+  .home_link
+  {
+    width: 165px;
+    height: 144px;
+    background-size: 180px 144px;
+    margin: 0em;
+  }
+  .home_link:hover
+  {
+    width: 170px;
+    height: 144px;
+    background-size: 185px 144px;
   }
   .vr_phone
   {
