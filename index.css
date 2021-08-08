@@ -4,1173 +4,603 @@ html
 }
 :root
 {
-  --sidebar_blue: #053A42;
-  --bright_blue: #63A4A8;
-  --brighter_blue: #7ECACE;
-  --burger: #8FEDF2;
-  --burger_menu: #3C7375;
-  --dark_blue: #090821;
-  --grey: #A7A4A8;
-  --light_grey: #C8C4CC;
-  --white: #F5F0F6;
-  --icons: #ffffff;
+  --dark_blue: #001A30;
+  --blue_var: #94DBD8;
+  --orange_var: #EFA974;
+  --blue: #63CCC8;
+  --orange: #F89766;
+  --yellow: #FFEEE0;
+  --white: #FFFFFF;
+  --black: #000000;
+  --dark_grey: #868686;
+  --light_grey: #C0C0C0;
+  --bgl_grey: #F8F9FA;
+  --bgm_grey: #F6F6F6;
+  --bgd_grey: #EAEAEA;
 }
 
 @font-face
 {
-  font-family: 'Montserrat';
-  src: url('resources/fonts/montserrat/Montserrat-Regular.ttf') format('opentype');
+  font-family: 'Comfortaa';
+  src: url('resources/fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face
 {
-  font-family: 'Montserrat_Bold';
-  src: url('resources/fonts/montserrat/Montserrat-Bold.ttf') format('opentype');
+  font-family: 'Avenir Next';
+  src: url('resources/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face
 {
-  font-family: 'Montserrat_Thin';
-  src: url('resources/fonts/montserrat/Montserrat-Thin.ttf') format('opentype');
-  font-weight: lighter;
+  font-family: 'Avenir Next';
+  src: url('resources/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+  font-weight: bold;
   font-style: normal;
 }
 
-/* setting up the background and its size */
+@font-face
+{
+  font-family: 'Avenir Next';
+  src: url('resources/fonts/AvenirNextLTPro-It.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+*,
+*:before,
+*:after
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ------setting up the body------ */
 body
 {
   margin: 0;
   overflow-x: hidden;
-  background: #EDEBED url(resources\imagesbackground_blue.jpg);
+  color: var(--dark_blue);
+  background-color: var(--bgd_grey);
+  font-family: Comfortaa;
+  display: grid;
+  text-rendering: optimizeLegibility;
+}
+
+/* ------navigation bar------ */
+#navigation
+{
+  font-family: Ubuntu;
+  padding: 0.5rem 1rem;
+  height: fit-content;
+  background-color: var(--dark_blue)!important;
+}
+
+#navigation ul { margin: 0px; }
+
+#dropdown
+{
   background-color: var(--dark_blue);
-}
-
-/* "Natalie Van Maerssen" in sidebar */
-#sidebar h1 a
-{
-  color: var(--bright_blue);
-  font-weight: 400;
-  font-size: 0.9em;
-}
-
-#sidebar h1 a:hover
-{
-  color: var(--brighter_blue);
-}
-
-#sidebar a
-{
-  text-decoration: none;
-  color: var(--grey);
-}
-
-#sidebar a:hover
-{
   color: var(--white);
 }
 
-.gallery_category a
+#dropdown_item { color: rgba(255,255,255,.55); }
+
+#dropdown_item:hover
 {
-  text-decoration: none;
+  color: rgba(255,255,255,.75);
+  background-color: transparent;
+}
+
+#icon_nav { opacity: .55; }
+
+#icon_nav:hover { opacity: .75; }
+
+.icons { display: inline-block; }
+.linkedin { display: inline-block; transform: translateY(-8%); }
+.dribbble { display: inline-block; transform: translateY(-6%); }
+.redbubble { display: inline-block; transform: translateY(-6%); }
+
+@media (max-width: 992px)   /* adjust on small and medium screens */
+{
+  .linkedin
+  {
+    width: fit-content;
+    transform: translateY(0%);
+    margin-right: 20px;
+  }
+  .dribbble
+  {
+    width: fit-content;
+    transform: translateY(0%);
+    margin-right: 20px;
+  }
+  .redbubble
+  {
+    width: fit-content;
+    transform: translateY(0%);
+    margin-right: 20px;
+  }
+}
+
+#burger {border: none;}
+
+/* erase border on click from burger */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* ------landing page header------ */
+#home
+{
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  display: block;
+  height: 100%;
+  top: 0px;
+  right: 0;
   color: var(--white);
 }
 
-.gallery_category a:hover
+#home .container
 {
-  color: var(--light_grey);
+  transition: 0.8s all cubic-bezier(0.61,0.21,0.49,0.99);
+  display: flex;
+  min-height: 600px;
+  height: auto;
+  padding-top: 220px;
+  padding-bottom: 220px;
+  align-items: flex-start;
 }
 
-.description a
+@media (max-width: 768px)   /* adjust on small screens */
 {
-  text-decoration: underline;
-  color: var(--grey);
+  #home .container
+  {
+    min-height: 450px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 }
 
-.full_screen
+#welcome_title
+{
+  font-family: Ubuntu;
+  font-weight: 500;
+  font-size: 130px;
+  line-height: 90%;
+}
+
+@media (max-width: 768px)   /* adjust on small screens */
+{
+  #welcome_title
+  {
+    font-size: 50px;
+    line-height: 110%;
+  }
+}
+
+/* ------ project links ------ */
+.box
+{
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  height: 125px;
+}
+
+.box a
 {
   width: 100%;
-  height: 100vh;
+  line-height: 125px;
 }
 
-/* setting up the outer params of the sidebar */
-#burger
+#professional_projects
 {
-  display: none;
-}
-#sidebar
-{
-  position: fixed;
-  display: block;
-  width: 15vw;
-  margin-right: 5vw;
-  min-width: 200px;
-  height: 100vh;
-  background: var(--sidebar_blue);
-  font-family: 'Montserrat';
+  border-radius: 0 0 0 25px;
+  background-color: var(--blue_var);
+  transition: all 0.5s;
 }
 
-#sidebar_inner
+#personal_projects
 {
-  margin-top: 7vh;
-  margin-left: 1em;
-  margin-right: 1em;
+  border-radius: 0 0 25px 0;
+  background-color: var(--orange_var);
+  transition: all 0.5s;
 }
 
-/* "Work" and "About" tabs in sidebar */
-.second_header
+@media (max-width: 992px)   /* adjust on small and medium screens */
 {
-  color: var(--bright_blue);
-  font-family: 'Montserrat_Bold';
-  font-weight: 300;
-  font-size: 0.8em;
-  margin-top: 5vh;
-  margin-bottom: 3vh;
+  #professional_projects { border-radius: 0 0 0 0; }
+  #personal_projects { border-radius: 0 0 25px 25px; }
 }
 
-/* so that you hover over the word, not the whole line */
-.second_header_inner
+#professional_projects:hover
 {
-  display: inline-block;
-}
-
-/* the sub-categories of "work" and "about" tabs in sidebar */
-.third_header
-{
-  color: var(--grey);
-  font-weight: 200;
-  font-size: 0.8em;
-  margin-left: 1em;
-  margin-top: 0vh;
-  margin-bottom: 2vh;
-}
-
-/* so that you hover over the word, not the whole line */
-.third_header_inner
-{
-  display: inline-block;
-}
-
-/* changing what the icons in the sidebar look like (e.g. linkedin) */
-.icons
-{
-  fill: var(--grey);
-  height: 1.5em;
-  width: auto;
-}
-
-/* changing the color of the icons when you hover over them */
-.icons:hover
-{
-  fill: var(--icons);
+  background-color: var(--blue);
+  transition: all 0.5s;
   cursor: pointer;
 }
 
-/* adding margins around the group of icons */
-.icons_div
+#personal_projects:hover
 {
-  margin-bottom: 3vh;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-}
-
-.main
-{
-  position: absolute;
-  left: 20vw;
-  display: block;
-  width: 80vw;
-  height: 100vh;
-  align-self: right;
-}
-
-/* class given to each viewable page */
-/* size of page (excluding fixed sidebar) determined here */
-.main_view
-{
-  width: 70vw;
-  position: absolute;
-  margin-top: 5vh;
-  margin-left: 2vw;
-  margin-right: 9vw;
-  text-align: center;
-  font-family: 'Montserrat';
-  color: var(--white);
-}
-
-#home_intro
-{
-  display: block;
-  height: auto;
-  width: 60vw;
-  margin: 4em;
-}
-
-#home_img
-{
-  display: table-cell;
-  padding-top: 1em;
-  vertical-align: top;
-}
-
-#home_gif
-{
-  display: list-item;
-  list-style-type: none;
-  height: 210px;
-  width: 210px;
-  background-image: url("resources/images/home/hello.gif");
-  border-radius: 50%;
-  background-size: 210px 280px;
-}
-
-#home_intro_text
-{
-  display: table-cell;
-  padding-left: 5em;
-  text-align: left;
-}
-
-#home_title
-{
-  font-size: 2.5em;
-  line-height: 1.7em;
-}
-
-#home_description
-{
-  font-size: 1em;
-  font-family: 'Montserrat_Thin';
-  line-height: 1.45em;
-}
-
-.home_link
-{
-  display: inline-block;
-  width: 110px;
-  height: 96px;
-  margin-left: 1em;
-  margin-right: 1em;
-  background-size: 120px 96px;
-}
-
-.home_link:hover
-{
-  width: 115px;
-  height: 96px;
-  background-size: 125px 100px;
-}
-
-#home_links
-{
-  height: auto;
-  width: 60vw;
-  padding: 4em;
-  padding-top: 1em;
-}
-
-#home_links a
-{
-  text-decoration: none; //to remove underline from pics
-}
-
-#home_vr
-{
-  background-image: url("resources/images/home/link_vr_off.png");
-}
-
-#home_dig
-{
-  background-image: url("resources/images/home/link_dig_off.png");
-}
-
-#home_cs
-{
-  background-image: url("resources/images/home/link_cs_off.png");
-}
-
-#home_photo
-{
-  background-image: url("resources/images/home/link_photo_off.png");
-}
-
-#home_vr:hover
-{
-  background-image: url("resources/images/home/link_vr_on.png");
-}
-
-#home_dig:hover
-{
-  background-image: url("resources/images/home/link_dig_on.png");
-}
-
-#home_cs:hover
-{
-  background-image: url("resources/images/home/link_cs_on.png");
-}
-
-#home_photo:hover
-{
-  background-image: url("resources/images/home/link_photo_on.png");
-}
-
-.gallery
-{
-  position: fixed;
-  width: 80vw;
-  height: 100vw;
-}
-
-/* main page, accessible by clicking on "work" tab in sidebar */
-#gallery_inner
-{
-  font-weight: 200;
-  font-size: 0.8em;
-}
-
-/* each individual subtab/picture of "work" (e.g. vr, vector art, etc) */
-.gallery_category
-{
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 0;
-  display: inline-block;
-}
-
-
-
-/* to make each block a little darker when you hover over it */
-.gallery_category:hover
-{
-  filter: brightness(0.8);
+  background-color: var(--orange);
+  transition: all 0.5s;
   cursor: pointer;
 }
 
-/* set the images of each block */
-#vr_img { background-image: url("resources/images/gallery/vr.png"); }
-#photo_img { background-image: url("resources/images/gallery/photo.png"); }
-#cs_img { background-image: url("resources/images/gallery/cs.png"); }
-#dig_img { background-image: url("resources/images/gallery/dig.png"); }
-
-/* prevent stretching when the window size changes */
-.category_image
+/*------ styling the underlining ------*/
+.custom-underline
 {
-  width: 30vw;
-  min-width: 300px;
-  height: 50vh;
-  min-height: 300px;
-  background-size: cover;
-  background-position: center;
-}
-
-/* center the text under each block's category (e.g. vr, csor art, etc) */
-.text
-{
+  position: relative;
+  display: inline-block;
   text-align: center;
-  font-size: 1.1em;
 }
 
-.photo_title
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active
 {
-  font-size: 1.1em;
-  margin-top: 0.5em;
+  color: var(--dark_blue);
+  text-decoration: none;
 }
 
-.photo_description
+.custom-underline::after
 {
-  font-size: 0.9em;
-  margin-top: 0.2em;
-  margin-bottom: 3em;
-  color: var(--grey)
+  content: "";
+  position: absolute;
 }
 
-/* specify what back to top button should look like and give it margins */
-.back_to_top
+.box .custom-underline::after   /*--- underlining before hover ---*/
 {
-  position:relative;
-  margin-top: 4vh;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  margin-bottom: 8vh;
-  height: 7vh;
+  top: 60%;
+  height: 1.5px !important;
+  width: 0%;
+  left: 50%;
+  background-color: var(--dark_blue);
+  transition: 0.4s ease-out all .1s;
 }
 
-/* give the actual button style */
-.back_to_top button
+.box:hover .custom-underline::after   /*--- underlining after hover ---*/
 {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  outline: 0;
+  width: 40%;
+  left: 30%;
+  transition: 0.5s ease all;
+}
+
+/* ------skills------ */
+#skills { background-color: var(--bgl_grey); }
+
+.st1 { fill: var(--dark_blue); }
+
+.luna { width: 100%; }
+
+.luna_box
+{
+  width: 20px;
+  height: 20px;
+}
+
+.luna_cat
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------about me------ */
+#about { background-color: var(--white); }
+
+/* ------back to top------ */
+#back_to_top
+{
+  overflow-x: hidden;
   background-color: inherit;
-  color: var(--white);
-  font-family: 'Montserrat';
-  text-align: center;
 }
 
-/* so that you hover over the button, not the whole width of the div */
-.back_to_top_inner
+.btt:hover
 {
-  display: inline-block;
-  font-size: 1.2em;
-}
-
-/* format the arrow up */
-.back_to_top_inner p
-{
-  margin: 0;
-  font-size: 1.8em;
-}
-
-/* change the color when you hover over the button */
-.back_to_top_inner:hover
-{
-  color: var(--bright_blue);
+  color: var(--blue);
   cursor: pointer;
 }
 
-.page_title
+/* ------generic text formatting------ */
+.title
+{
+  font-family: Ubuntu;
+  font-weight: 500;
+}
+
+.subtitle
+{
+  font-family: Ubuntu;
+  font-weight: 400;
+}
+
+.description { font-size: 0.9rem; }
+
+.section_intro
 {
   text-align: center;
-  font-size: 1.7em;
-  margin-top: 6vh;
-  margin-bottom: 2vh;
 }
 
-.vr_phone
-{
-  display: none;
-}
+/* ------generic backgrounds------ */
+.white-bg { background-color: var(--white); }
 
-.vr_web
-{
-  display: block;
-}
-
-#vr_portfolio { }
-
-.vr_project_outer
-{
-  margin: 2em;
-  display: inline-block;
-}
-
-.vr_project_inner
-{
-  display: block;
-}
-
-.iframes
+/* ------personal projects - gallery formatting------ */
+#pers_card   /* modification of original bootstrap class */
 {
   display: inline-block;
+  border-radius: 0.5rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card_title
+{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 992px)   /* adjust on large screens */
+{
+  .card_title
+  {
+    margin-bottom: 2px;
+  }
+}
+
+#images-wrapper
+{
+  /* line-height: 0; */
+  -webkit-column-count: 4;
+  -webkit-column-gap: 10px;
+  -moz-column-count: 4;
+  -moz-column-gap: 10px;
+  column-count: 4;
+  column-gap: 10px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.img-wrapper-card
+{
+  width: 100% !important;
+  height: auto !important;
+}
+
+.img-wrapper-card p { font-size: 12px; }
+
+@media (max-width: 992px)   /* adjust on small and medium screens */
+{
+  #images-wrapper
+  {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+  }
+}
+
+@media (max-width: 768px)   /* adjust on small screens */
+{
+  #images-wrapper
+  {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+/* ------professional projects - gallery formatting------ */
+#profess_card
+{
   border: none;
-  margin-right: 2em;
-  margin-bottom: 1em;
-  width: 40vw;
-  max-width: 600px;
-  height: 315px;
+  border-radius: 0 0 0 0;
 }
 
-.description
+#pro_pic { border-radius: 0 0 0 0; }
+
+@media (min-width: 992px)   /* adjust medium and large screens */
 {
-  display: table-cell;
-  width: 25vw;
-  height: 315px;
-  position: relative;
-  vertical-align: middle;
-  text-align: left;
-  margin-right: 4em;
-  color: var(--grey);
+  #profess_card { flex-direction: row; }
+  #pro_pic { width: 50%; }
+  #pro_text { width: 50%; }
 }
 
-#dig_portfolio { }
-
-.dig_project_outer
+#button
 {
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 0;
-  display: block;
-}
-
-.dig_project_inner
-{
-  width: 100%;
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#dig_img_11
-{
-  height: 60vh;
-  min-width: 320px;
-  min-height: 180px;
-  background-image: url("resources/images/digitalArt/flag.gif");
-}
-#dig_img_10
-{
-  height: 60vh;
-  min-width: 320px;
-  min-height: 180px;
-  background-image: url("resources/images/digitalArt/name_fading.gif");
-}
-#dig_img_09
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 247px;
-  background-image: url("resources/images/digitalArt/nilaa.gif");
-}
-#dig_img_08
-{
-  height: 90vh;
-  min-width: 240px;
-  min-height: 310.5px;
-  background-image: url("resources/images/digitalArt/monet.png");
-}
-#dig_img_07
-{
-  height: 60vh;
-  min-width: 320px;
-  min-height: 180px;
-  background-image: url("resources/images/digitalArt/picnic.png");
-}
-#dig_img_06
-{
-  height: 90vh;
-  min-width: 240px;
-  min-height: 309px;
-  background-image: url("resources/images/digitalArt/tommy.png");
-}
-#dig_img_05
-{
-  height: 90vh;
-  min-width: 288px;
-  min-height: 360px;
-  background-image: url("resources/images/digitalArt/dani.png");
-}
-#dig_img_04
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 247px;
-  background-image: url("resources/images/digitalArt/existentialCrisis.png");
-}
-#dig_img_03
-{
-  height: 90vh;
-  min-width: 240px;
-  min-height: 310.5px;
-  background-image: url("resources/images/digitalArt/hairyHoudini.png");
-}
-#dig_img_02
-{
-  height: 90vh;
-  min-width: 375px;
-  min-height: 319px;
-  background-image: url("resources/images/digitalArt/us.png");
-}
-#dig_img_01
-{
-  height: 60vh;
-  min-width: 300px;
-  min-height: 154.25px;
-  background-image: url("resources/images/digitalArt/nobili.png");
-}
-
-#cs_portfolio { }
-
-.description
-{
-  display: table-cell;
-  width: 25vw;
-  height: 315px;
-  position: relative;
-  vertical-align: middle;
-  text-align: left;
-  margin-right: 4em;
-  color: var(--grey);
-}
-
-.cs_outer
-{
-  width: 70vw;
-  margin: 2em;
-  display: inline-block;
-}
-
-.cs_inner
-{
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.cs_description
-{
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  text-align: left;
-  width: 50vw;
-  font-size: 1em;
-  margin-top: 1em;
-  color: var(--grey);
-}
-
-#cs_pic_05
-{
-  height: 70vh;
-  width: 68vw;
-  display: table-cell;
-  background-image: url("resources/images/computerScience/website.png");
-}
-
-#cs_pic_04
-{
-  width: 80vw;
-  display: table-cell;
-}
-
-#cs_pic_03
-{
-  height: 60vh;
-  width: 80vw;
-  display: table-cell;
-  background-image: url("resources/images/computerScience/movingVertices.gif");
-}
-
-#cs_pic_02
-{
-  height: 60vh;
-  width: 80vw;
-  display: table-cell;
-  background-image: url("resources/images/computerScience/squares.gif");
-}
-
-#cs_pic_01
-{
-  height: 60vh;
-  width: 80vw;
-  display: table-cell;
-  background-image: url("resources/images/computerScience/rayTrace.gif");
-}
-
-.cs_iframes
-{
-  display: inline-block;
-  border: none;
-  width: 70vw;
-  max-width: 800px;
-  height: 370px;
-}
-
-#photo_portfolio { }
-
-.photo_project_outer
-{
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 0;
-  display: block;
-}
-
-.photo_project_inner
-{
-  width: 100%;
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#photo_img_14
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/takingFlight.png");
-}
-#photo_img_13
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/amsterdamseGrachten.png");
-}
-#photo_img_12
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/parakeet.png");
-}
-#photo_img_11
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/rokin.png");
-}
-#photo_img_10
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/amsterdam.png");
-}
-#photo_img_09
-{
-  height: 80vh;
-  min-width: 240px;
-  min-height: 320px;
-  background-image: url("resources/images/photography/russianLock.png");
-}
-#photo_img_08
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/vielsalm.png");
-}
-#photo_img_07
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/fluffingUp.png");
-}
-#photo_img_06
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/aFloridaSunset.png");
-}
-#photo_img_05
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/marin.png");
-}
-#photo_img_04
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/sunflowers.png");
-}
-#photo_img_03
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/napTime.png");
-}
-#photo_img_02
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/safariTree.png");
-}
-#photo_img_01
-{
-  height: 80vh;
-  min-width: 320px;
-  min-height: 240px;
-  background-image: url("resources/images/photography/yosemite.png");
-}
-
-.about_outer
-{
-  margin: 2em;
-  margin-bottom: 4em;
-  display: block;
-}
-
-#about_pic
-{
-  display: table-cell;
-  margin-right: 4em;
-  margin-bottom: 1em;
-  width: 50vw;
-  height: 75vh;
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("resources/images/about/me.png");
-}
-
-.about_description
-{
-  display: table-cell;
-  width: 25vw;
-  height: 315px;
-  position: relative;
-  vertical-align: middle;
-  text-align: left;
-  margin-left: 4em;
-  color: var(--light_grey);
-}
-
-.cv_outer
-{
-  width: 70vw;
-  height: 100vh;
-  margin-top: 5vh;
-}
-
-#cv_download
-{
-  margin: 2em;
-  margin-bottom: 4em;
-  text-align: left;
-}
-
-#cv_download a
-{
-  text-decoration: none;
-  color: var(--grey);
-}
-
-#cv_download a:hover
-{
+  font-family: Ubuntu;
   color: var(--white);
-  cursor: pointer;
+  background-color: var(--dark_blue);
+  border: none;
 }
 
-#cv_img
+#button:hover
+{
+  background-color: var(--blue);
+}
+
+.pro_title
+{
+  font-family: Ubuntu;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+}
+
+.pro_intro
+{
+  font-size: 14px;
+  line-height: 150%;
+  display: inline-block;
+
+}
+
+.pro_description
+{
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  text-align: center;
+}
+
+@media (max-width: 768px)   /* adjust on small screens */
+{
+  .pro_title
+  {
+    font-size: 24px;
+    line-height: 125%;
+  }
+  .pro_description
+  {
+    font-size: 12px;
+  }
+
+}
+
+#pro_img
 {
   width: 100%;
-  height: 340%;
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("resources/images/cv/cv.png");
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 2px 2px 10px var(--dark_grey);
 }
 
-@media screen and (max-width: 992px)
+.video
 {
-  #burger
+  height: 30vw;
+}
+
+@media (max-width: 992px)   /* adjust on small and medium screens */
+{
+  .video { height: 25vw; }
+}
+@media (max-width: 768px)   /* adjust on small screens */
+{
+  .video { height: 50vw; }
+}
+
+/* ------professional projects - vr------ */
+.vr_title
+{
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 110%;
+}
+
+.vr_description
+{
+  font-size: 14px;
+  line-height: 150%;
+  display: inline-block;
+  text-align: justify;
+}
+
+@media (max-width: 768px)   /* adjust on small screens */
+{
+  .vr_title
   {
-    display: block;
-    margin-left: 0.5em;
-    color: var(--burger);
+    font-size: 18px;
+    line-height: 150%;
   }
-  #sidebar
+  .vr_description
   {
-    position: fixed;
-    display: block;
-    z-index: 1;
-    width: 100vw;
-    margin-right: 0px;
-    height: auto;
-    font-family: 'Montserrat';
-  }
-  #sidebar_inner
-  {
-    margin: 0px;
-  }
-  #sidebar_inner h1
-  {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    font-size: 3.8em;
-    display: flex;
-    justify-content: space-between;
-  }
-  #sidebar a
-  {
-    color: var(--sidebar_blue);
-  }
-  #sidebar a:hover
-  {
-    color: var(--sidebar_blue);
-  }
-  #headers
-  {
-    display: none;
-    background-color: var(--burger_menu);
-    padding-top: 1em;
-    padding-bottom: 3em;
-  }
-  .second_header
-  {
-    font-size: 2.6em;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    text-align: center;
-  }
-  .third_header
-  {
-    font-size: 2.4em;
-    margin-left: 0em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    text-align: center;
-  }
-  .icons
-  {
-    fill: var(--sidebar_blue);
-    height: 3.4em;
-  }
-  .icons:hover
-  {
-    fill: var(--sidebar_blue);
-  }
-  .icons_div
-  {
-    margin-bottom: 0em;
-    margin-top: 2em;
-    text-align: center;
-    position: relative;
-  }
-  .page_title
-  {
-    font-size: 3.2em;
-    margin-top: 0vh;
-    margin-bottom: 2vh;
-  }
-  .main
-  {
-    position: relative;
-    left: 0vw;
-    display: block;
-    width: 100vw;
-    height: 100vh;
-  }
-  .main_view
-  {
-    width: 96vw;
-    margin-top: 12vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-  }
-  .category_image
-  {
-    width: 75vw;
-    min-width: 150px;
-    height: 30vh;
-    min-height: 150px;
-  }
-  #home_intro
-  {
-    width: 80vw;
-    margin-top: 0em;
-  }
-  #home_img
-  {
-    display: table-cell;
-    padding-top: 0em;
-    -webkit-appearance: slider-horizontal;
-  }
-  #home_gif
-  {
-    height: 510px;
-    width: 510px;
-    background-size: 510px 680px;
-  }
-  #home_intro_text
-  {
-    display: block;
-    padding-left: 0em;
-  }
-  #home_title
-  {
-    font-size: 3.5em;
-    line-height: 1.3em;
-    margin-top: 1em;
-  }
-  #home_description
-  {
-    font-size: 2em;
-    font-family: 'Montserrat';
-    line-height: 1.45em;
-  }
-  #home_links
-  {
-    width: 80vw;
-  }
-  .home_link
-  {
-    width: 165px;
-    height: 144px;
-    background-size: 180px 144px;
-    margin: 0em;
-  }
-  .home_link:hover
-  {
-    width: 170px;
-    height: 144px;
-    background-size: 185px 144px;
-  }
-  .vr_phone
-  {
-    display: block;
+    font-size: 12px;
   }
 
-  .vr_web
-  {
-    display: none;
-  }
-  .vr_project_outer
-  {
-    width: 80vw;
-    height: 420px;
-  }
-  .vr_project_inner
-  {
-    height: 420px;
-  }
-  .text
-  {
-    font-size: 3em;
-  }
-  .iframes
-  {
-    margin-right: 0em;
-    width: 80vw;
-    max-width: 80vw;
-    height: 420px;
-  }
-  .description
-  {
-    display: block;
-    width: 80vw;
-    font-size: 2em;
-  }
-  .dig_project_outer
-  {
-    margin-top: 0em;
-    margin-bottom: 0em;
-  }
-  #dig_img_11 { height: 28vh; }
-  #dig_img_10 { height: 28vh; }
-  #dig_img_09 { height: 35vh; }
-  #dig_img_08 { height: 60vh; }
-  #dig_img_07 { height: 25vh; }
-  #dig_img_06 { height: 60vh; }
-  #dig_img_05 { height: 60vh; }
-  #dig_img_04 { height: 35vh; }
-  #dig_img_03 { height: 60vh; }
-  #dig_img_02 { height: 40vh; }
-  #dig_img_01 { height: 25vh; }
-  .photo_title { font-size: 2.3em; }
-  .photo_description { font-size: 2em; }
-  #photo_img_14 { height: 35vh; }
-  #photo_img_13 { height: 35vh; }
-  #photo_img_12 { height: 35vh; }
-  #photo_img_11 { height: 35vh; }
-  #photo_img_10 { height: 35vh; }
-  #photo_img_09 { height: 65vh; }
-  #photo_img_08 { height: 35vh; }
-  #photo_img_07 { height: 35vh; }
-  #photo_img_06 { height: 35vh; }
-  #photo_img_05 { height: 35vh; }
-  #photo_img_04 { height: 35vh; }
-  #photo_img_03 { height: 35vh; }
-  #photo_img_02 { height: 35vh; }
-  #photo_img_01 { height: 35vh; }
-  .cs_outer
-  {
-    width: 80vw;
-  }
-  .cs_description
-  {
-    vertical-align: top;
-    width: 80vw;
-    font-size: 2em;
-    margin-top: 1em;
-  }
-  #cs_pic_05
-  {
-    height: 30vh;
-    width: 80vw;
-  }
-  #cs_pic_04
-  {
-    height: auto;
-    width: 80vw;
-  }
-  #cs_pic_03
-  {
-    height: 25vh;
-    width: 80vw;
-  }
-  #cs_pic_02
-  {
-    height: 25vh;
-    width: 80vw;
-  }
-  #cs_pic_01
-  {
-    height: 25vh;
-    width: 80vw;
-  }
-  .cs_iframes
-  {
-    width: 80vw;
-  }
-  #about_pic
-  {
-    display: inline-block;
-    margin: 3em;
-    width: 70vw;
-    height: 40vh;
-  }
-  .about_description
-  {
-    display: inline-block;
-    width: 60vw;
-    height: auto;
-    font-size: 2em;
-    margin: 0px;
-  }
-  .cv_outer
-  {
-    width: 90vw;
-    height: 100vh;
-    margin: 3vw;
-    margin-top: 0em;
-    margin-bottom: 0em;
-  }
-  #cv_download
-  {
-    font-size: 2.3em;
-    margin: 0em;
-    margin-top: 0.8em;
-  }
-  #cv_img
-  {
-    width: 90vw;
-    height: 130vh;
-  }
-  .back_to_top
-  {
-    margin-bottom: 6vh;
-  }
-  .back_to_top_inner
-  {
-    font-size: 2.6em;
-  }
-  .back_to_top_inner:hover
-  {
-    color: var(--white);
-  }
+}
+
+.vr_video
+{
+  height: 25vw;
+}
+
+@media (max-width: 992px)   /* adjust on small and medium screens */
+{
+  .vr_video { height: 25vw; }
+}
+@media (max-width: 768px)   /* adjust on small screens */
+{
+  .vr_video { height: 50vw; }
 }

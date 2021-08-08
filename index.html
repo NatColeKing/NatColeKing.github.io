@@ -2,169 +2,334 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Natalie Van Maerssen</title>
+    <link rel="icon" type="image/png" href="resources/images/favicon.png">
+    <!-- - - - - - -bootstrap- - - - - - -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <body>
-    <script src="resources/jquery.min.js" charset="utf-8"></script>
-    <script>
-      function burger_menu()
-      {
-        var x = document.getElementById("headers");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
-    </script>
-    <script>
-      window.onload = function sub_headers()
-      {
-        if (document.getElementById("burger").style.display === "block")
-        {
-          document.getElementById("headers").style.display = "none";
-        }
-      }
-    </script>
-    <script>
-      function hide_burger_menu() { document.getElementById("headers").style.display = "none"; }
-    </script>
-  <div class="full_screen">
-    <div id="sidebar">
-      <div id="sidebar_inner">
-        <h1>
-          <div align="left" onclick="hide_burger_menu()">
-            <a href="index.html">Natalie Van Maerssen</a>
-          </div>
-          <div id="burger" align="right" onclick="burger_menu()">☰
-          </div>
-        </h1>
-        <div id="headers">
-          <div class="second_header">
-            <div class="second_header_inner" id="work_cat_name" onclick="hide_burger_menu()">
-              <a href="work.html">WORK</a>
+<!-- - - - - - -navigation bar- - - - - - -->
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img src="resources/images/favicon.png" alt="" width="auto" height="30" class="d-inline-block">
+          <span class="ps-1">
+            Natalie<span class="d-none d-lg-inline"> Van Maerssen</span><span class="d-lg-none"> VM</span>
+          </span>
+        </a>
+        <button id="burger" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link align-middle" href="index.html#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Portfolio
+              </a>
+              <ul id="dropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a id="dropdown_item" class="dropdown-item" href="professional-projects.html">Professional Projects</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a id="dropdown_item" class="dropdown-item" href="personal-projects.html">Personal Projects</a></li>
+              </ul>
+            </li>
+            <div class="icons">
+              <li class="nav-item linkedin">
+                <a id="icon_nav" target="_blank" class="nav-link" href="https://www.linkedin.com/in/natalie-van-maerssen/">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 300 300" style="enable-background:new 0 0 300 300; height: 16px;" xml:space="preserve">
+                  <style type="text/css">
+                  .st0{fill:#FFFFFF;}
+                  </style>
+                  <g id="XMLID_801_">
+                    <path id="XMLID_802_" class="st0" d="M69.9,96.4H9.6c-2.7,0-4.8,2.1-4.8,4.8v193.9c0,2.7,2.1,4.8,4.8,4.8h60.2
+                    c2.7,0,4.8-2.1,4.8-4.8V101.2C74.7,98.6,72.5,96.4,69.9,96.4z"/>
+                    <path id="XMLID_803_" class="st0" d="M39.8,0C17.8,0,0,17.8,0,39.8s17.8,39.8,39.8,39.8c21.9,0,39.7-17.9,39.7-39.8
+                    C79.5,17.8,61.6,0,39.8,0z"/>
+                    <path id="XMLID_804_" class="st0" d="M223.1,91.5c-24.2,0-42.1,10.5-52.9,22.3v-12.6c0-2.7-2.1-4.8-4.8-4.8h-57.7
+                    c-2.7,0-4.8,2.1-4.8,4.8v193.9c0,2.7,2.1,4.8,4.8,4.8h60.1c2.7,0,4.8-2.1,4.8-4.8v-95.9c0-32.3,8.8-44.9,31.3-44.9
+                    c24.5,0,26.4,20.2,26.4,46.5v94.3c0,2.7,2.1,4.8,4.8,4.8h60.1c2.7,0,4.8-2.1,4.8-4.8V188.8C300,140.7,290.8,91.5,223.1,91.5z"/>
+                  </g>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item dribbble">
+                <a id="icon_nav" target="_blank" class="nav-link" href="https://dribbble.com/natalievm_">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 300 300" style="enable-background:new 0 0 300 300; height: 18px;" xml:space="preserve">
+                  <style type="text/css">
+                  .st0{fill:#FFFFFF;}
+                  </style>
+                  <path class="st0" d="M0,150c0-27.2,6.7-52.3,20.1-75.3s31.6-41.2,54.6-54.6S122.8,0,150,0s52.3,6.7,75.3,20.1s41.2,31.6,54.6,54.6
+                    S300,122.8,300,150s-6.7,52.3-20.1,75.3s-31.6,41.2-54.6,54.6S177.2,300,150,300s-52.3-6.7-75.3-20.1s-41.2-31.6-54.6-54.6
+                    S0,177.2,0,150z M24.9,150c0,31.2,10.5,58.7,31.5,82.5c9.6-18.8,24.8-36.7,45.6-53.7s41.1-27.7,60.9-32.1c-3-7-5.9-13.3-8.7-18.9
+                    c-34.4,11-71.6,16.5-111.6,16.5c-7.8,0-13.6-0.1-17.4-0.3c0,0.8,0,1.8-0.2,3C25,148.2,24.9,149.2,24.9,150z M28.8,119.1
+                    c4.4,0.4,10.9,0.6,19.5,0.6c33.4,0,65.1-4.5,95.1-13.5c-15.2-27-31.9-49.5-50.1-67.5C77.5,46.7,64,57.8,52.7,72
+                    S33.4,101.9,28.8,119.1z M73.5,248.7c22.6,17.6,48.1,26.4,76.5,26.4c14.8,0,29.5-2.8,44.1-8.4c-4-34.2-11.8-67.3-23.4-99.3
+                    c-18.4,4-36.9,14.1-55.6,30.3S82.5,230.9,73.5,248.7z M119.4,29.1C137,47.3,153.3,70,168.3,97.2c27.2-11.4,47.7-25.9,61.5-43.5
+                    C206.6,34.5,180,24.9,150,24.9C139.8,24.9,129.6,26.3,119.4,29.1z M179.1,118.5c3,6.4,6.4,14.5,10.2,24.3
+                    c14.8-1.4,30.9-2.1,48.3-2.1c12.4,0,24.7,0.3,36.9,0.9c-1.6-27.2-11.4-51.4-29.4-72.6C232.1,88.4,210.1,104.9,179.1,118.5z
+                    M196.8,163.8c10.2,29.6,17.1,60,20.7,91.2c15.8-10.2,28.7-23.3,38.7-39.3c10-16,16-33.3,18-51.9c-14.6-1-27.9-1.5-39.9-1.5
+                  C223.3,162.3,210.8,162.8,196.8,163.8z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item redbubble">
+                <a id="icon_nav" target="_blank" class="nav-link" href="https://www.redbubble.com/people/unique--corn/shop">
+                  <svg version="1.1" id="layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 300 300" style="enable-background:new 0 0 300 300; height: 18px;" xml:space="preserve">
+                  <style type="text/css">
+                  .st0{fill:#FFFFFF;}
+                  </style>
+                  <path class="st0" d="M208.2,204.2h-40.1c-2.2,0-4-1.7-4-4V99.8c0-2.2,1.7-4,4-4h37.1c27.7,0,33.7,16.3,33.7,30.2
+                    c0,7.9-2.2,14.4-6.2,18.8c10.1,4.2,15.6,13.6,15.6,27.5C248.3,192.1,233.2,204.2,208.2,204.2 M150,204.2H66.8c-2.2,0-4-1.7-4-4l0,0
+                    V99.8c0-2.2,1.7-4,4-4h38.9c24.3,0,38.6,13.1,38.6,34.9c0,14.6-7.4,26-19.1,30.7l27.7,36.1c1.5,1.7,1.2,4.2-0.5,5.7
+                  C152,203.7,151,204.2,150,204.2 M150,0C67.1,0,0,67.1,0,150s67.1,150,150,150s150-67.1,150-150S232.9,0,150,0"/>
+                  </svg>
+                </a>
+              </li>
             </div>
-          </div>
-          <div class="third_header">
-            <div class="third_header_inner vr_cat_name" onclick="hide_burger_menu()">
-              <a href="virtualreality.html">Virtual Reality</a>
-            </div>
-          </div>
-          <div class="third_header">
-            <div class="third_header_inner dig_cat_name" onclick="hide_burger_menu()">
-              <a href="digitalart.html">Digital Art</a>
-            </div>
-          </div>
-          <div class="third_header">
-            <div class="third_header_inner cs_cat_name" onclick="hide_burger_menu()">
-              <a href="computerscience.html">Computer Science</a>
-            </div>
-          </div>
-          <div class="third_header">
-            <div class="third_header_inner photo_cat_name" onclick="hide_burger_menu()">
-              <a href="photography.html">Photography</a>
-            </div>
-          </div>
-          <div class="second_header">
-            <div class="second_header_inner" id="about_cat_name" onclick="hide_burger_menu()">
-              <a href="about.html">ABOUT</a>
-            </div>
-          </div>
-          <div class="third_header">
-            <div class="third_header_inner" id="contact_cat_name" onclick="hide_burger_menu()">
-              <a href="cv.html">CV</a>
-            </div>
-          </div>
-          <div class="second_header">
-            <div class="second_header_inner" id="home_cat_name" onclick="hide_burger_menu()">
-              <a href="index.html">HOME</a>
-            </div>
-          </div>
-          <div class="icons_div">
-            <svg class="icons" id="linkedin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
-              <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
-                      c0,0,0.1-9.8,0-10.8H16v1.5c0,0,0,0,0,0h0v0C16.4,9,17.2,7.9,19,7.9c2.3,0,4,1.5,4,4.9V19H19.6z M8.9,6.7L8.9,6.7
-                      C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z">
-              </path>
-            </svg>
-            <svg class="icons" id="github" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24"
-            style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
-              <g>
-                <path class="st0" d="M15,4c-4.5,0-8.2,3.7-8.2,8.2c0,3.6,2.4,6.7,5.6,7.8c0.4,0.1,0.6-0.2,0.6-0.4c0-0.2,0-0.8,0-1.5
-                      c-2.3,0.5-2.8-1-2.8-1c-0.4-0.9-0.9-1.2-0.9-1.2c-0.7-0.5,0.1-0.5,0.1-0.5c0.8,0.1,1.3,0.8,1.3,0.8c0.7,1.3,1.9,0.9,2.4,0.7
-                      c0.1-0.5,0.3-0.9,0.5-1.1c-1.8-0.2-3.7-0.9-3.7-4.1c0-0.9,0.3-1.6,0.8-2.2c-0.1-0.2-0.4-1,0.1-2.2c0,0,0.7-0.2,2.3,0.8
-                      C13.6,8.1,14.3,8,15,8c0.7,0,1.4,0.1,2.1,0.3c1.6-1.1,2.3-0.8,2.3-0.8c0.4,1.1,0.2,2,0.1,2.2c0.5,0.6,0.8,1.3,0.8,2.2
-                      c0,3.2-1.9,3.8-3.7,4c0.3,0.3,0.6,0.8,0.6,1.5c0,1.1,0,2,0,2.3c0,0.2,0.1,0.5,0.6,0.4c3.3-1.1,5.6-4.2,5.6-7.8
-                      C23.2,7.7,19.5,4,15,4z">
-                </path>
-                <path class="st1" d="M9.9,15.8c0,0-0.1,0.1-0.1,0c-0.1,0-0.1-0.1-0.1-0.1c0,0,0.1-0.1,0.1,0C9.9,15.7,9.9,15.7,9.9,15.8L9.9,15.8z
-                      M9.8,15.7">
-                </path>
-                <path class="st1" d="M10.2,16.1c0,0-0.1,0-0.2,0C10,16.1,10,16,10,15.9c0,0,0.1,0,0.2,0C10.3,16,10.3,16.1,10.2,16.1L10.2,16.1z
-                      M10.2,16.1">
-                </path>
-                <path class="st1" d="M10.6,16.6c-0.1,0-0.1,0-0.2-0.1c-0.1-0.1-0.1-0.2,0-0.2c0.1,0,0.1,0,0.2,0.1C10.6,16.5,10.6,16.6,10.6,16.6
-                      L10.6,16.6z M10.6,16.6">
-                </path>
-                <path class="st1" d="M11,17.1c0,0-0.1,0-0.2,0c-0.1-0.1-0.1-0.2,0-0.2c0,0,0.1,0,0.2,0C11,16.9,11.1,17,11,17.1L11,17.1z M11,17.1">
-                </path>
-                <path class="st1" d="M11.6,17.3c0,0.1-0.1,0.1-0.2,0.1c-0.1,0-0.2-0.1-0.1-0.2c0-0.1,0.1-0.1,0.2-0.1
-                      C11.6,17.2,11.6,17.3,11.6,17.3L11.6,17.3z M11.6,17.3">
-                </path>
-                <path class="st1" d="M12.3,17.4c0,0.1-0.1,0.1-0.2,0.1c-0.1,0-0.2-0.1-0.2-0.1c0-0.1,0.1-0.1,0.2-0.1
-                      C12.2,17.3,12.3,17.3,12.3,17.4L12.3,17.4z M12.3,17.4">
-                </path>
-                <path class="st1" d="M12.9,17.3c0,0.1-0.1,0.1-0.2,0.2c-0.1,0-0.2,0-0.2-0.1c0-0.1,0.1-0.1,0.2-0.2C12.8,17.2,12.9,17.2,12.9,17.3
-                      L12.9,17.3z M12.9,17.3">
-                </path>
-              </g>
-            </svg>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- - - - - - -landing header- - - - - - -->
+    <div id="home" style="background-image:url('resources/images/home/home_header.png');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 aos-init aos-animate" data-aos="fade-in">
+            <h1 id="welcome_title">Welcome!</h1>
+            <h5>My name is Natalie, and I make things beautiful and efficient.</h5>
           </div>
         </div>
       </div>
     </div>
-    <div class="main">
-      <div id="home" class="main_view">
-        <div id="home_intro">
-          <div id="home_img">
-            <div id="home_gif"></div>
-          </div>
-          <div id="home_intro_text">
-            <div id="home_title">
-              Hi, I'm Natalie!
-            </div>
-            <div id="home_description">
-              I'm a UI/UX designer specialized in human-technology
-              interaction and based in Boca Raton, FL. I've worked
-              in virtual reality development for the last three
-              years and have become passionate about creating
-              the perfect user experience. My work in VR has
-              allowed me to better understand how people interact
-              with technology to create smoother, more effective
-              user flows. I'm driven, creative, and very detail-
-              oriented, and I love learning something new every
-              day.
-            </div>
+<!-- - - - - - -projects links- - - - - - -->
+    <div class="container-fluid" style="background-color: #F8F9FA">
+      <div class="row">
+        <div class="col-md-12 col-lg-6 p-0 m-0">
+          <div id="professional_projects" class="box">
+            <a href="professional-projects.html" class="custom-underline">Professional Projects</a>
           </div>
         </div>
-        <div id="home_links" onclick="hide_burger_menu()">
-          <a href="virtualreality.html">
-            <div id="home_vr" class="home_link"></div>
-          </a>
-          <a href="digitalart.html">
-            <div id="home_dig" class="home_link"></div>
-          </a>
-          <a href="computerscience.html">
-            <div id="home_cs" class="home_link"></div>
-          </a>
-          <a href="photography.html">
-            <div id="home_photo" class="home_link"></div>
-          </a>
+        <div class="col-md-12 col-lg-6 p-0 m-0">
+          <div id="personal_projects" class="box">
+            <a href="personal-projects.html" class="custom-underline">Personal Projects</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-    <script src="index.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="index.css">
+<!-- - - - - - -skills section- - - - - - -->
+    <div class="container-fluid" style="background-color: #F8F9FA;">
+      <div id="skills" class="p-3 p-md-5 text-align-center">
+        <h1 class="title display-5 m-0 py-2 py-md-5">My Skills</h1>
+        <div class="row">
+          <!-- - - - - - specialties - - - - - -->
+          <div class="col-12 col-md-7">
+            <h2 class="subtitle pt-3 pb-2 pt-md-0 pb-md-3">Specialties</h2>
+            <div class="py-2">
+              <h4 class="subtitle">Project Planning</h4>
+              <span style="font-size:0.9rem">You can ask anyone who knows me -
+                I have always been the family planner. From process to budget to
+                timeline, I always come prepared. I typically begin the planning
+                process with a lot of research to make sure I understand everything
+                inside and out, and then I can start creating an appropriate
+                timeline (typically with bi-weekly sprints) and budget. My tools of
+                choice include Excel to continuously ensure the team stays on
+                budget, and Asana or Trello to stay on track.
+              </span>
+            </div>
+            <div class="py-2">
+              <h4 class="subtitle">Project Management</h4>
+              <span style="font-size:0.9rem">Once the planning phase is complete,
+                I delve into management mode. I have intermittently had leadership
+                positions for two of my five and a half years in the workforce, but
+                have also managed multiple projects in between (both personal
+                projects and as a freelance contractor the summers between my
+                college years). My primary goal: to deliver the perfect blend of
+                functionality and aesthetics, ahead of schedule, and under budget.
+              </span>
+            </div>
+            <div class="py-2">
+              <h4 class="subtitle">Visual and Graphic Design</h4>
+              <span style="font-size:0.9rem">When I'm not organizing and managing
+                projects, my keen eye for detail has allowed me to become a very
+                successful designer. I've had the privilege of creating content
+                for some of the biggest names in various industries, including
+                Samsung, Verifone, and teams/stadiums from the NFL, NBA, and MLB.
+                Though I primarily create graphic designs in Illustrator and
+                Photoshop, I am also experienced with UI/UX design, web design,
+                videography, and animation.
+              </span>
+            </div>
+            <div class="py-2">
+              <h4 class="subtitle">Interdepartmental Collaboration</h4>
+              <span style="font-size:0.9rem">Regardless of what I'm working on,
+                I thrive when I get to work with others, especially those with
+                different professional backgrounds. I am always trying to learn
+                new things, and am passionate about understanding others to
+                deliver a product that works for everyone. This type of
+                collaboration has also made me an excellent communicator, allowing
+                me to effectively lead some of the most wonderfully diverse teams.
+              </span>
+            </div>
+          </div>
+          <!-- - - - - - hobbies - - - - - -->
+          <div class="col-12 col-md-5 order-md-first">
+            <h2 class="subtitle pt-5 pb-3 pb-md-3 pt-md-0">Hobbies</h2>
+            <div class="col-10 pb-2">
+              <img class="luna offset-md-1 offset-lg-0 d-flex" src="resources/images/home/hobbies.png"></img>
+            </div>
+            <div class="col-10">
+              <div class="row m-2 align-items-center">
+                <div class="luna_box col-1" style="background-color: #061B2F;"></div>
+                <span class="col-10">Hiking</span>
+              </div>
+              <div class="row m-2 align-items-center">
+                <div class="luna_box col-1" style="background-color: #92CBD6;"></div>
+                <span class="col-10">Videography/Animation</span>
+              </div>
+              <div class="row m-2 align-items-center">
+                <div class="luna_box col-1" style="background-color: #1B6883;"></div>
+                <span class="col-10">Photography</span>
+              </div>
+              <div class="row m-2 align-items-center">
+                <div class="luna_box col-1" style="background-color: #68C8C5;"></div>
+                <span class="col-10">Cooking</span>
+              </div>
+              <div class="row m-2 align-items-center">
+                <div class="luna_box col-1" style="background-color: #5D9EBF;"></div>
+                <span class="col-10">Playing with Luna the Golden</span>
+              </div>
+              <div class="row m-2 align-items-center">
+                <div class="luna_box col-1" style="background-color: #173E6B;"></div>
+                <span class="col-10">Dancing</span>
+              </div>
+            </div>
+          </div>
+          <!-- - - - - - icons - - - - - -->
+          <div class="text-center py-4 py-md-5">
+            <li class="nav-item linkedin m-2">
+              <a id="icon_nav" target="_blank" class="nav-link" href="https://www.linkedin.com/in/natalie-van-maerssen/">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 300 300" style="enable-background:new 0 0 300 300; height: 16px;" xml:space="preserve">
+                <style type="text/css">
+                .st1{fill:#FFFFFF;}
+                </style>
+                <g id="XMLID_801_">
+                  <path id="XMLID_802_" class="st1" d="M69.9,96.4H9.6c-2.7,0-4.8,2.1-4.8,4.8v193.9c0,2.7,2.1,4.8,4.8,4.8h60.2
+                  c2.7,0,4.8-2.1,4.8-4.8V101.2C74.7,98.6,72.5,96.4,69.9,96.4z"/>
+                  <path id="XMLID_803_" class="st1" d="M39.8,0C17.8,0,0,17.8,0,39.8s17.8,39.8,39.8,39.8c21.9,0,39.7-17.9,39.7-39.8
+                  C79.5,17.8,61.6,0,39.8,0z"/>
+                  <path id="XMLID_804_" class="st1" d="M223.1,91.5c-24.2,0-42.1,10.5-52.9,22.3v-12.6c0-2.7-2.1-4.8-4.8-4.8h-57.7
+                  c-2.7,0-4.8,2.1-4.8,4.8v193.9c0,2.7,2.1,4.8,4.8,4.8h60.1c2.7,0,4.8-2.1,4.8-4.8v-95.9c0-32.3,8.8-44.9,31.3-44.9
+                  c24.5,0,26.4,20.2,26.4,46.5v94.3c0,2.7,2.1,4.8,4.8,4.8h60.1c2.7,0,4.8-2.1,4.8-4.8V188.8C300,140.7,290.8,91.5,223.1,91.5z"/>
+                </g>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item dribbble m-2">
+              <a id="icon_nav" target="_blank" class="nav-link" href="https://dribbble.com/natalievm_">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 300 300" style="enable-background:new 0 0 300 300; height: 18px;" xml:space="preserve">
+                <style type="text/css">
+                .st1{fill:#FFFFFF;}
+                </style>
+                <path class="st1" d="M0,150c0-27.2,6.7-52.3,20.1-75.3s31.6-41.2,54.6-54.6S122.8,0,150,0s52.3,6.7,75.3,20.1s41.2,31.6,54.6,54.6
+                  S300,122.8,300,150s-6.7,52.3-20.1,75.3s-31.6,41.2-54.6,54.6S177.2,300,150,300s-52.3-6.7-75.3-20.1s-41.2-31.6-54.6-54.6
+                  S0,177.2,0,150z M24.9,150c0,31.2,10.5,58.7,31.5,82.5c9.6-18.8,24.8-36.7,45.6-53.7s41.1-27.7,60.9-32.1c-3-7-5.9-13.3-8.7-18.9
+                  c-34.4,11-71.6,16.5-111.6,16.5c-7.8,0-13.6-0.1-17.4-0.3c0,0.8,0,1.8-0.2,3C25,148.2,24.9,149.2,24.9,150z M28.8,119.1
+                  c4.4,0.4,10.9,0.6,19.5,0.6c33.4,0,65.1-4.5,95.1-13.5c-15.2-27-31.9-49.5-50.1-67.5C77.5,46.7,64,57.8,52.7,72
+                  S33.4,101.9,28.8,119.1z M73.5,248.7c22.6,17.6,48.1,26.4,76.5,26.4c14.8,0,29.5-2.8,44.1-8.4c-4-34.2-11.8-67.3-23.4-99.3
+                  c-18.4,4-36.9,14.1-55.6,30.3S82.5,230.9,73.5,248.7z M119.4,29.1C137,47.3,153.3,70,168.3,97.2c27.2-11.4,47.7-25.9,61.5-43.5
+                  C206.6,34.5,180,24.9,150,24.9C139.8,24.9,129.6,26.3,119.4,29.1z M179.1,118.5c3,6.4,6.4,14.5,10.2,24.3
+                  c14.8-1.4,30.9-2.1,48.3-2.1c12.4,0,24.7,0.3,36.9,0.9c-1.6-27.2-11.4-51.4-29.4-72.6C232.1,88.4,210.1,104.9,179.1,118.5z
+                  M196.8,163.8c10.2,29.6,17.1,60,20.7,91.2c15.8-10.2,28.7-23.3,38.7-39.3c10-16,16-33.3,18-51.9c-14.6-1-27.9-1.5-39.9-1.5
+                C223.3,162.3,210.8,162.8,196.8,163.8z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item redbubble m-2">
+              <a id="icon_nav" target="_blank" class="nav-link" href="https://www.redbubble.com/people/unique--corn/shop">
+                <svg version="1.1" id="layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 300 300" style="enable-background:new 0 0 300 300; height: 18px;" xml:space="preserve">
+                <style type="text/css">
+                .st1{fill:#FFFFFF;}
+                </style>
+                <path class="st1" d="M208.2,204.2h-40.1c-2.2,0-4-1.7-4-4V99.8c0-2.2,1.7-4,4-4h37.1c27.7,0,33.7,16.3,33.7,30.2
+                  c0,7.9-2.2,14.4-6.2,18.8c10.1,4.2,15.6,13.6,15.6,27.5C248.3,192.1,233.2,204.2,208.2,204.2 M150,204.2H66.8c-2.2,0-4-1.7-4-4l0,0
+                  V99.8c0-2.2,1.7-4,4-4h38.9c24.3,0,38.6,13.1,38.6,34.9c0,14.6-7.4,26-19.1,30.7l27.7,36.1c1.5,1.7,1.2,4.2-0.5,5.7
+                C152,203.7,151,204.2,150,204.2 M150,0C67.1,0,0,67.1,0,150s67.1,150,150,150s150-67.1,150-150S232.9,0,150,0"/>
+                </svg>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+<!-- - - - - - -about me- - - - - - -->
+      <div id="about" class="row px-3">
+        <div class="col-1 d-none d-lg-inline">
+          <img class="img-fluid" src="resources/images/home/about_stripes.png" alt="">
+        </div>
+        <div class="col-12 col-lg-4 offset-lg-1 order-lg-2 py-5">
+          <img class="img-fluid" src="resources/images/home/about.png" alt="">
+        </div>
+        <div class="col-12 col-lg-5 py-0 py-lg-5 ps-lg-5">
+          <h1 class="title display-5 pb-md-3">About Me</h1>
+          <p style="font-size:0.9rem">
+            I am an experienced project manager who typically wears quite a
+            few hats. I have worked in project coordination, graphic design,
+            web design/development, marketing, and virtual reality, but my
+            passion lies in managing projects to bring them to life.
+          </p>
+          <p style="font-size:0.9rem">
+            Working in so many varied fields has made me realize I love
+            constantly learning new things. I have also become an excellent
+            communicator, able to empathize with and understand someone from
+            any professional background. I am a creative thinker - I have a
+            vivid imagination and a keen eye for detail, but I am also very
+            analytical and methodical. In college, I double-majored in computer
+            science with an arts emphasis, and in philosophy with a science
+            emphasis, appeasing both sides of my personality.
+          </p>
+          <p style="font-size:0.9rem">
+            I thrive in collaborative environments, especially when leading a
+            team. Mentoring my team and keeping them organized for success have
+            been my two favorite aspects of the leadership positions I have
+            held had the privilege of holding. I live for the challenge of
+            turning complex problems into beautiful, efficient solutions, and
+            when the project is finished, witnessing it have a positive impact
+            on someone's life.
+          </p>
+          <p style="font-size:0.9rem">
+            My work is my passion, and I am thrilled to be sharing some of it
+            with you! Please don't hesitate to reach out to me at
+            nvanmaerssen@gmail.com with any questions or if you think I can be
+            of service to you. In the meantime, enjoy perusing some of my
+            handiwork!
+          </p>
+        </div>
+      </div>
+<!-- - - - - - -back to top- - - - - - -->
+      <div id="back_to_top" class="row py-5 justify-content-center" style="background-color: #FFF">
+        <div class="btt col-6 col-lg-2 text-center" onclick="topFunction()">
+          <p class="mt-2 mb-0">↑</p>
+          <p class="mb-2">Back to Top</p>
+        </div>
+      </div>
+    </div>
+  <script src="index.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="index.css">
+<!-- - - - - - -bootstrap- - - - - - -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
